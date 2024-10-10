@@ -7,49 +7,45 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import DateTimeWeather from './DataHoraClimaLocal';
 
 export default function Pagina(props) {
 
-console.log(props.tnav)
-const prop = props.tnav ? props.tnav: 'Projeto Aula'
-// let prop = props.tnav
-// if(prop === ''){
-//   prop = 'Projeto Aula'}
-    return (
-        <Container>
+  console.log(props.tnav)
+  const prop = props.tnav ? props.tnav : 'Projeto Aula'
+  // let prop = props.tnav
+  // if(prop === ''){
+  //   prop = 'Projeto Aula'}
+  return (
+    <Container>
 
-        <header className="bg-white">
+      <header className="bg-white">
 
-          <div className='d-flex justify-content-between align-items-center border-bottom'>
+        <div className='d-flex justify-content-between align-items-center border-bottom'>
 
-          <Button  href="/">Home</Button>
+          <DateTimeWeather />
 
           <div className="  text-center p-4">TTESTE</div>
           <Button className="btn btn-secondary" href="/home">Login</Button>
-          </div>
+        </div>
+
+        <Nav className="justify-content-center m-3 me-auto" activeKey="/home">
+          <Nav.Link className="text-dark" variant="dark" href="/">Link</Nav.Link>
+          <Nav.Link className="text-dark" href="/">Link</Nav.Link>
+          <Nav.Link className="text-dark" href="/">Link</Nav.Link>
+          <Nav.Link className="text-dark" href="/">Link</Nav.Link>
+          <Nav.Link className="text-dark" href="/">Link</Nav.Link>
+        </Nav>
+      </header>
 
 
-
-        <Nav className="justify-content-center m-3 me-auto"  activeKey="/home">
-        <Nav.Link className="text-dark" variant="dark" href="/">Link</Nav.Link>
-        <Nav.Link className="text-dark" href="/">Link</Nav.Link>
-        <Nav.Link className="text-dark" href="/">Link</Nav.Link>
-        <Nav.Link className="text-dark" href="/">Link</Nav.Link>
-        <Nav.Link className="text-dark" href="/">Link</Nav.Link>
-      </Nav>
-
-        </header>
-
-    
-          
-      
-          <Container>
-            {props.children}
-          </Container>
-        </Container>
+      <Container>
+        {props.children}
+      </Container>
+    </Container>
 
 
-// Off canva para pagina secundaria de generos, hamburguer, não consegui retirar o map para ficar mais limpo :(
+    // Off canva para pagina secundaria de generos, hamburguer, não consegui retirar o map para ficar mais limpo :(
     // <Container>
 
     //     <>
@@ -86,7 +82,7 @@ const prop = props.tnav ? props.tnav: 'Projeto Aula'
     //                   </NavDropdown.Item>
     //                 </NavDropdown>
     //               </Nav>
-              
+
     //             </Offcanvas.Body>
     //           </Navbar.Offcanvas>
     //         </Container>
@@ -94,8 +90,8 @@ const prop = props.tnav ? props.tnav: 'Projeto Aula'
     //     ))}
     //   </>
     // </Container>
-    
-    
-      )
+
+
+  )
 
 }
