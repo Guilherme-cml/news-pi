@@ -58,14 +58,14 @@ const DateTimeWeather = () => {
 
   return (
     <div>
-      <p>{location.city}, {location.country}</p>
-      <p>Data: {formattedDate}</p>
-      <p>Hora: {formattedTime}</p>
-      {weather ? (
-        <p>Clima: {weather.temp}°C, {weather.description}</p>
+      <p>{location.city}, {location.country}<br/>
+      {formattedDate}</p>
+     
+      {/* {weather ? (
+        <p>{weather.temp}°C,<br/> {weather.description}</p>
       ) : (
         <p>Carregando informações do clima...</p>
-      )}
+      )} */}
     </div>
   );
 };

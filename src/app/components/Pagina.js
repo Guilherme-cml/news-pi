@@ -25,8 +25,13 @@ export default function Pagina(props) {
 
           <DateTimeWeather />
 
-          <div className="  text-center p-4">TTESTE</div>
-          <Button className="btn btn-secondary" href="/home">Login</Button>
+          <div className=" justify-content-center text-center p-4">TTESTE</div>
+        
+        <div style={{ width: '221px' }}>
+
+          <Button className="btn btn-secondary" style={{ margin: '0 0 0 150px' }}  href="/home">Login</Button>
+        </div>
+
         </div>
 
         <Nav className="justify-content-center m-3 me-auto" activeKey="/home">
