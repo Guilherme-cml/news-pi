@@ -22,6 +22,7 @@ export default function Pagina(props) {
       <header className="bg-white">
 
         <div className='d-flex justify-content-between align-items-center border-bottom'>
+          
 
           <DateTimeWeather />
 
