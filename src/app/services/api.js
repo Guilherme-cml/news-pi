@@ -1,0 +1,1 @@
+// Este arquivo pode ser usado para simular chamadas a uma API real 
