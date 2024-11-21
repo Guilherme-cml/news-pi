@@ -1,89 +1,124 @@
 'use client';
 
 import { useEffect, useState } from "react";
-
-import { Button, Table, Spinner, Alert, Container } from "react-bootstrap";
-import Link from "next/link";
+import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
+import { useRouter } from "next/navigation";
 import Nav from "@/components/Nav";
 
-export default function ProdutosPage() {
+export default function Produtos() {
     const [produtos, setProdutos] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [busca, setBusca] = useState('');
+    const [produtosFiltrados, setProdutosFiltrados] = useState([]);
+    const router = useRouter();
 
     useEffect(() => {
-        loadLocalStorageProdutos();
+        const produtosSalvos = JSON.parse(localStorage.getItem('produtos')) || [];
+        setProdutos(produtosSalvos);
+        setProdutosFiltrados(produtosSalvos);
     }, []);
 
-    const loadLocalStorageProdutos = () => {
-        const produtosLocalStorage = JSON.parse(localStorage.getItem('produtos')) || [];
-        setProdutos(produtosLocalStorage);
-        setLoading(false);
-    };
-
-    const excluirProduto = (id) => {
-        if (window.confirm('Tem certeza que deseja excluir este produto?')) {
-            const novosProdutos = produtos.filter(p => p.id !== id);
-            localStorage.setItem('produtos', JSON.stringify(novosProdutos));
-            setProdutos(novosProdutos);
-        }
-    };
-
-    if (loading) return (
-        <Container>
-            <Spinner animation="border" />
-        </Container>
-    );
-
-    if (error) return (
-        <Container>
-            <Alert variant="danger">{error}</Alert>
-        </Container>
-    );
+    // Função de busca melhorada
+    useEffect(() => {
+        const resultado = produtos.filter(produto =>
+            produto.title.toLowerCase().includes(busca.toLowerCase())
+        );
+        setProdutosFiltrados(resultado);
+    }, [busca, produtos]);
 
     return (
         <>
             <Nav />
-            <Container>
-                <Link href="/produtos/novo" className="btn btn-primary mb-3">Novo Produto</Link>
-                <Table striped bordered hover>
-                    <thead>
-                        <tr>
-                            <th>Imagem</th>
-                            <th>Título</th>
-                            <th>Categoria</th>
-                            <th>Preço</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {produtos.map(produto => (
-                            <tr key={produto.id}>
-                                <td>
-                                    <img
+            <Container className="py-4">
+                <div className="d-flex justify-content-between align-items-center mb-4">
+                    <h1 className="mb-0">Produtos</h1>
+                    <Button 
+                        variant="primary"
+                        onClick={() => router.push('/produtos/form')}
+                    >
+                        Novo Produto
+                    </Button>
+                </div>
+
+                {/* Barra de busca ajustada */}
+                <div className="mb-4" style={{ maxWidth: '300px' }}>
+                    <Form.Control
+                        type="text"
+                        placeholder="Buscar produto..."
+                        value={busca}
+                        onChange={(e) => setBusca(e.target.value)}
+                        size="sm"
+                    />
+                </div>
+
+                {/* Mensagem quando não há resultados */}
+                {produtosFiltrados.length === 0 && (
+                    <div className="text-center py-4">
+                        <p className="text-muted">Nenhum produto encontrado</p>
+                    </div>
+                )}
+
+                <Row xs={1} md={2} lg={4} className="g-3">
+                    {produtosFiltrados.map(produto => (
+                        <Col key={produto.id}>
+                            <Card className="h-100 shadow-sm">
+                                <div style={{ 
+                                    height: '180px',
+                                    overflow: 'hidden',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    backgroundColor: '#f8f9fa'
+                                }}>
+                                    <Card.Img
+                                        variant="top"
                                         src={produto.image}
-                                        alt={produto.title}
-                                        style={{ width: '50px', height: '50px', objectFit: 'contain' }}
+                                        style={{ 
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'contain',
+                                            padding: '8px'
+                                        }}
                                     />
-                                </td>
-                                <td>{produto.title}</td>
-                                <td>{produto.category}</td>
-                                <td>R$ {produto.price}</td>
-                                <td>
-                                    <Link href={`/produtos/detalhes/${produto.id}`} className="btn btn-primary me-2">
-                                        Ver
-                                    </Link>
-                                    <Link href={`/produtos/form/${produto.id}`} className="btn btn-warning me-2">
-                                        Editar
-                                    </Link>
-                                    <Button className="mt-2 btn btn-danger" onClick={() => excluirProduto(produto.id)}>
-                                        Excluir
-                                    </Button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </Table>
+                                </div>
+                                <Card.Body className="d-flex flex-column p-3">
+                                    <Card.Title 
+                                        style={{ 
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                            display: '-webkit-box',
+                                            WebkitLineClamp: 2,
+                                            WebkitBoxOrient: 'vertical',
+                                            minHeight: '40px',
+                                            fontSize: '0.95rem'
+                                        }}
+                                    >
+                                        {produto.title}
+                                    </Card.Title>
+                                    <Card.Text className="text-primary fs-6 mb-2">
+                                        R$ {Number(produto.price).toFixed(2)}
+                                    </Card.Text>
+                                    <div className="d-flex gap-1 mt-auto">
+                                        <Button
+                                            variant="outline-primary"
+                                            onClick={() => router.push(`/produtos/detalhes/${produto.id}`)}
+                                            className="flex-grow-1"
+                                            size="sm"
+                                        >
+                                            Ver Detalhes
+                                        </Button>
+                                        <Button
+                                            variant="outline-secondary"
+                                            onClick={() => router.push(`/produtos/form/${produto.id}`)}
+                                            size="sm"
+                                        >
+                                            Editar
+                                        </Button>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    ))}
+                </Row>
             </Container>
         </>
     );
