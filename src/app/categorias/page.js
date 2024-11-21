@@ -56,6 +56,9 @@ export default function Home() {
       const novasCategorias = categories.filter(c => c.id !== id);
       localStorage.setItem('categorias', JSON.stringify(novasCategorias));
       setCategories(novasCategorias);
+      if (selectedCategory === categories.find(c => c.id === id)?.name) {
+        setSelectedCategory('all');
+      }
     }
   };
   const addToCart = (product) => {
@@ -86,50 +89,63 @@ export default function Home() {
   return (
     <>
       <Nav />
-
-      <Container>
+      <Container className="my-4">
+        <h2 className="text-center mb-4">Gerenciamento de Categorias</h2>
         <Row>
           <Col md={3}>
-            <h3>Categorias</h3>
-            <ListGroup className="mb-4">
-              <ListGroup.Item
-                action
-                active={selectedCategory === 'all'}
-                onClick={() => setSelectedCategory('all')}
-              >
-                Todos os Produtos
-              </ListGroup.Item>
-              {categories.map(category => (
-                <ListGroup.Item
-                  key={category.id}
-                  action
-                  active={selectedCategory === category.name}
-                  onClick={() => setSelectedCategory(category.name)}
-                >
-                  {category.name}
-                  <div className="float-end"> {/* Adicionando um contêiner para alinhar os ícones à direita */}
-                    <Link href={`/categorias/form/${category.id}`}>
-                      <FaEdit />
-                    </Link>
-                    <span
-                      className="text-danger p-0 ms-2"
-                      onClick={() => excluirCategoria(category.id)}
-                      style={{ cursor: 'pointer' }}
+            <Card className="mb-4">
+              <Card.Header className="bg-primary text-white">
+                <h4 className="mb-0">Categorias</h4>
+              </Card.Header>
+              <Card.Body className="p-0">
+                <ListGroup variant="flush">
+                  <ListGroup.Item
+                    action
+                    active={selectedCategory === 'all'}
+                    onClick={() => setSelectedCategory('all')}
+                    className="d-flex justify-content-between align-items-center"
+                  >
+                    Todos os Produtos
+                  </ListGroup.Item>
+                  {categories.map(category => (
+                    <ListGroup.Item
+                      key={category.id}
+                      action
+                      active={selectedCategory === category.name}
+                      className="d-flex justify-content-between align-items-center"
                     >
-                      <FaTrash />
-                    </span>
-                  </div>
-                </ListGroup.Item>
-              ))}
-            </ListGroup>
-            <Button href="/categorias/form">Nova Categoria</Button>
+                      <span onClick={() => setSelectedCategory(category.name)} style={{ flex: 1, cursor: 'pointer' }}>
+                        {category.name}
+                      </span>
+                      <div>
+                        <Link href={`/categorias/form/${category.id}`} className="text-primary me-2">
+                          <FaEdit size={16} />
+                        </Link>
+                        <span
+                          className="text-danger"
+                          onClick={() => excluirCategoria(category.id)}
+                          style={{ cursor: 'pointer' }}
+                        >
+                          <FaTrash size={16} />
+                        </span>
+                      </div>
+                    </ListGroup.Item>
+                  ))}
+                </ListGroup>
+              </Card.Body>
+              <Card.Footer className="bg-light">
+                <Button href="/categorias/form" variant="success" className="w-100">
+                  Nova Categoria
+                </Button>
+              </Card.Footer>
+            </Card>
           </Col>
 
           <Col md={9}>
             <Row xs={1} md={2} lg={3} className="g-4">
               {filteredProducts.map(product => (
                 <Col key={product.id}>
-                  <Card className="h-100">
+                  <Card className="h-100 shadow-sm">
                     <div style={{ height: '200px', padding: '1rem' }}>
                       <Card.Img
                         variant="top"
@@ -152,7 +168,7 @@ export default function Home() {
                         {product.title}
                       </Card.Title>
                       <Card.Text className="text-muted mb-2">
-                        ${product.price}
+                        R$ {product.price.toFixed(2)}
                       </Card.Text>
                       <Button
                         onClick={() => addToCart(product)}

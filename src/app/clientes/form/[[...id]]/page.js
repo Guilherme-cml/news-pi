@@ -1,144 +1,160 @@
 'use client'
 
+import { useEffect, useState } from "react";
+import { Button, Card, Container, Form } from "react-bootstrap";
+import { useRouter } from "next/navigation";
+import { v4 } from "uuid";
 import Nav from "@/components/Nav";
 
-import ClienteValidator from "@/validators/ClienteValidator";
-import { Formik } from "formik";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { Button, Container, Form } from "react-bootstrap";
-import { FaCheck } from "react-icons/fa";
-import { MdOutlineArrowBack } from "react-icons/md";
-import { mask, unmask } from "remask";
-import { v4 } from "uuid";
+export default function FormCliente({ params }) {
+    const router = useRouter();
+    const [cliente, setCliente] = useState({
+        nome: '',
+        cpf: '',
+        email: '',
+        telefone: '',
+        dataNascimento: ''
+    });
 
-export default function Page({ params }) {
+    useEffect(() => {
+        if (params.id) {
+            const clientes = JSON.parse(localStorage.getItem('clientes')) || []
+            const clienteEncontrado = clientes.find(cliente => cliente.id === params.id[0])
+            if (clienteEncontrado) {
+                setCliente(clienteEncontrado)
+            }
+        }
+    }, [params])
 
-    const route = useRouter()
+    function handleSubmit(e) {
+        e.preventDefault()
 
-    const clientes = JSON.parse(localStorage.getItem('clientes')) || []
-    const dados = clientes.find(item => item.id == params.id)
-    const cliente = dados || { nome: '', email: '', telefone: '', data_nascimento: '', cpf: '' }
-
-    function salvar(dados) {
-
-        if (cliente.id) {
-            Object.assign(cliente, dados)
-        } else {
-            dados.id = v4()
-            clientes.push(dados)
+        // Validação básica
+        if (!cliente.nome || !cliente.cpf || !cliente.email) {
+            alert('Por favor, preencha todos os campos obrigatórios');
+            return;
         }
 
-        localStorage.setItem('clientes', JSON.stringify(clientes))
-        return route.push('/clientes')
+        try {
+            const clientes = JSON.parse(localStorage.getItem('clientes')) || []
+
+            if (params.id) {
+                // Modo Edição
+                const index = clientes.findIndex(c => c.id === params.id[0])
+                if (index !== -1) {
+                    clientes[index] = { ...cliente }
+                    localStorage.setItem('clientes', JSON.stringify(clientes))
+                    alert('Cliente atualizado com sucesso!')
+                }
+            } else {
+                // Modo Criação
+                const novoCliente = {
+                    ...cliente,
+                    id: v4()
+                }
+                clientes.push(novoCliente)
+                localStorage.setItem('clientes', JSON.stringify(clientes))
+                alert('Cliente cadastrado com sucesso!')
+            }
+
+            router.push('/clientes')
+        } catch (error) {
+            console.error(error)
+            alert('Ocorreu um erro ao salvar o cliente')
+        }
+    }
+
+    function handleChange(e) {
+        const { name, value } = e.target
+        setCliente(prev => ({
+            ...prev,
+            [name]: value
+        }))
     }
 
     return (
         <>
             <Nav />
-            <Container>
-
-            <Formik
-                initialValues={cliente}
-                validationSchema={ClienteValidator}
-                onSubmit={values => salvar(values)}
-            >
-                {({
-                    values,
-                    handleChange,
-                    handleSubmit,
-                    setFieldValue,
-                    errors,
-                }) => {
-                    return (
-                        <Form>
+            <Container className="py-4">
+                <Card>
+                    <Card.Header as="h5" className="text-center">
+                        {params.id ? 'Editar Cliente' : 'Novo Cliente'}
+                    </Card.Header>
+                    <Card.Body>
+                        <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="nome">
-                                <Form.Label>Nome</Form.Label>
+                                <Form.Label>Nome*</Form.Label>
                                 <Form.Control
                                     type="text"
                                     name="nome"
-                                    value={values.nome}
-                                    onChange={handleChange('nome')}
-                                    isInvalid={!!errors.nome}
+                                    value={cliente.nome}
+                                    onChange={handleChange}
+                                    placeholder="Nome completo"
+                                    required
                                 />
-                                <Form.Control.Feedback type="invalid">
-                                    {errors.nome}
-                                </Form.Control.Feedback>
                             </Form.Group>
-                           
-                          
-                            <Form.Group className="mb-3" controlId="documento">
-                                <Form.Label>CPF</Form.Label>
+
+                            <Form.Group className="mb-3" controlId="cpf">
+                                <Form.Label>CPF*</Form.Label>
                                 <Form.Control
                                     type="text"
                                     name="cpf"
-                                    value={values.cpf}
-                                    onChange={handleChange('cpf')}
-                                    isInvalid={!!errors.cpf}
+                                    value={cliente.cpf}
+                                    onChange={handleChange}
+                                    placeholder="000.000.000-00"
+                                    required
                                 />
-                                <Form.Control.Feedback type="invalid">
-                                    {errors.cpf}
-                                </Form.Control.Feedback>
                             </Form.Group>
+
                             <Form.Group className="mb-3" controlId="email">
-                                <Form.Label>E-mail</Form.Label>
+                                <Form.Label>Email*</Form.Label>
                                 <Form.Control
-                                    type="text"
+                                    type="email"
                                     name="email"
-                                    value={values.email}
-                                    onChange={handleChange('email')}
-                                    isInvalid={!!errors.email}
+                                    value={cliente.email}
+                                    onChange={handleChange}
+                                    placeholder="email@exemplo.com"
+                                    required
                                 />
-                                <Form.Control.Feedback type="invalid">
-                                    {errors.email}
-                                </Form.Control.Feedback>
                             </Form.Group>
+
                             <Form.Group className="mb-3" controlId="telefone">
                                 <Form.Label>Telefone</Form.Label>
                                 <Form.Control
-                                    type="text"
+                                    type="tel"
                                     name="telefone"
-                                    value={values.telefone}
-                                    onChange={(value)=>{
-                                        setFieldValue('telefone', mask(value.target.value, '(99) 99999-9999'))
-                                    }}
-                                    isInvalid={!!errors.telefone}
+                                    value={cliente.telefone}
+                                    onChange={handleChange}
+                                    placeholder="(00) 00000-0000"
                                 />
-                                <Form.Control.Feedback type="invalid">
-                                    {errors.telefone}
-                                </Form.Control.Feedback>
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="data_nascimento">
-                                <Form.Label>Dt. Nascimento</Form.Label>
+
+                            <Form.Group className="mb-4" controlId="dataNascimento">
+                                <Form.Label>Data de Nascimento</Form.Label>
                                 <Form.Control
-                                    type="text"
-                                    name="data_nascimento"
-                                    value={values.data_nascimento}
-                                    onChange={(value)=>{
-                                        setFieldValue('data_nascimento', mask(value.target.value, '99/99/9999'))
-                                    }}
-                                    isInvalid={!!errors.data_nascimento}
+                                    type="date"
+                                    name="dataNascimento"
+                                    value={cliente.dataNascimento}
+                                    onChange={handleChange}
                                 />
-                                <Form.Control.Feedback type="invalid">
-                                    {errors.data_nascimento}
-                                </Form.Control.Feedback>
                             </Form.Group>
-                            <div className="text-center">
-                                <Button onClick={handleSubmit} variant="success">
-                                    <FaCheck /> Salvar
+
+                            <div className="d-flex gap-2">
+                                <Button type="submit" variant="primary" className="px-4">
+                                    {params.id ? 'Atualizar' : 'Cadastrar'}
                                 </Button>
-                                <Link
-                                    href="/clientes"
-                                    className="btn btn-danger ms-2"
+                                <Button 
+                                    type="button" 
+                                    variant="outline-secondary" 
+                                    onClick={() => router.push('/clientes')}
+                                    className="px-4"
                                 >
-                                    <MdOutlineArrowBack /> Voltar
-                                </Link>
+                                    Cancelar
+                                </Button>
                             </div>
                         </Form>
-                    )
-                }}
-            </Formik>
+                    </Card.Body>
+                </Card>
             </Container>
         </>
     )
