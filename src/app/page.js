@@ -2,12 +2,12 @@
 import { useState, useEffect } from 'react';
 import { 
   Container, 
-  Nav, 
   Navbar, 
   Card, 
   Row, 
   Col 
 } from 'react-bootstrap';
+import Nav from '@/components/Nav';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -20,19 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
-        <Container>
-          <Navbar.Brand href="/">Fake Market</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="/products">Products</Nav.Link>
-              <Nav.Link href="/categorias">Categories</Nav.Link>
-              <Nav.Link href="/cart">Cart</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <Nav />
 
       <Container>
         <Row xs={1} md={3} lg={4} className="g-4">

@@ -1,13 +1,14 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
+
 import Navbar from 'react-bootstrap/Navbar';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Nav from '@/components/Nav';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -31,20 +32,8 @@ export default function Home() {
     : products.filter(product => product.category === selectedCategory);
 
   return (
-    <div>
-      <Navbar bg="light" expand="lg" className="mb-4">
-        <Container>
-          <Navbar.Brand href="/">Fake Market</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="/login">Login</Nav.Link>
-              <Nav.Link href="/register">Register</Nav.Link>
-              <Nav.Link href="/cart">Cart</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+    <>
+      <Nav />
 
       <Container>
         <Row>
@@ -114,6 +103,6 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
-    </div>
+    </>
   );
 }
