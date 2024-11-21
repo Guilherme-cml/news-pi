@@ -24,8 +24,13 @@ export default function HomePage() {
       fetch('https://fakestoreapi.com/products/categories')
         .then(res => res.json())
         .then(data => {
-          setCategoryList(data);
-          localStorage.setItem('categorias', JSON.stringify(data));
+          // Adiciona um UUID a cada categoria
+          const categoriesWithId = data.map(category => ({
+            id: uuidv4(), // Gera um UUID para cada categoria
+            name: category // Preserva o nome da categoria
+          }));
+          setCategoryList(categoriesWithId);
+          localStorage.setItem('categorias', JSON.stringify(categoriesWithId));
         });
     }
     const storedProducts = JSON.parse(localStorage.getItem('produtos'));
