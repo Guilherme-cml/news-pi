@@ -2,8 +2,9 @@
 
 import { Pie, Bar } from 'react-chartjs-2';
 import { useEffect, useState } from "react";
-import { Nav } from "react-bootstrap";
+import Nav from "@/components/Nav";
 import { Chart, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement } from 'chart.js';
+import { Container } from 'react-bootstrap';
 
 // Registrar os elementos e escalas necessários
 Chart.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement);
@@ -52,7 +53,10 @@ export default function DashboardPage() {
     };
 
     return (
-        <Nav>
+        <>
+            <Nav />
+            <Container>
+
             <h2>Resumo</h2>
             <p>Total de Usuários: {usuarios.length}</p>
             <p>Total de Produtos: {totalProdutos}</p>
@@ -67,6 +71,8 @@ export default function DashboardPage() {
                     <Bar data={barData} />
                 </>
             )}
-        </Nav>
+        
+            </Container>
+        </>
     );
 } 
