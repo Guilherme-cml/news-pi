@@ -13,38 +13,19 @@ export default function ProdutosPage() {
 
     useEffect(() => {
         loadLocalStorageProdutos();
-        fetchProdutos();
     }, []);
 
     const loadLocalStorageProdutos = () => {
         const produtosLocalStorage = JSON.parse(localStorage.getItem('produtos')) || [];
         setProdutos(produtosLocalStorage);
+        setLoading(false);
     };
 
-    const fetchProdutos = async () => {
-        try {
-            const response = await fetch('https://fakestoreapi.com/products');
-            if (!response.ok) throw new Error('Erro ao carregar produtos');
-            const data = await response.json();
-            setProdutos(prevProdutos => [...prevProdutos, ...data]);
-        } catch (error) {
-            setError(error.message);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    const excluirProduto = async (id) => {
+    const excluirProduto = (id) => {
         if (window.confirm('Tem certeza que deseja excluir este produto?')) {
-            try {
-                const response = await fetch(`https://fakestoreapi.com/products/${id}`, {
-                    method: 'DELETE',
-                });
-                if (!response.ok) throw new Error('Erro ao excluir produto');
-                setProdutos(produtos.filter(p => p.id !== id));
-            } catch (error) {
-                setError(error.message);
-            }
+            const novosProdutos = produtos.filter(p => p.id !== id);
+            localStorage.setItem('produtos', JSON.stringify(novosProdutos));
+            setProdutos(novosProdutos);
         }
     };
 

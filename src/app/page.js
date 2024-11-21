@@ -15,7 +15,10 @@ export default function Home() {
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
       .then(res => res.json())
-      .then(data => setProducts(data));
+      .then(data => {
+        setProducts(data);
+        localStorage.setItem('produtos', JSON.stringify(data));
+      });
   }, []);
 
   return (

@@ -17,26 +17,15 @@ export default function ProdutoForm({ params }) {
     });
 
     useEffect(() => {
-        fetchProduto(params.id);
-    }, [params.id]);
-
-    const fetchProduto = async (id) => {
         const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-        const produtoEncontrado = produtos.find(p => p.id === id);
+        const produtoEncontrado = produtos.find(p => p.id === params.id);
 
         if (produtoEncontrado) {
             setProduto(produtoEncontrado);
         } else {
-            try {
-                const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-                if (!response.ok) throw new Error('Erro ao carregar produto da API');
-                const produtoApi = await response.json();
-                setProduto(produtoApi);
-            } catch (error) {
-                setError(error.message);
-            }
+            setError('Produto não encontrado no localStorage');
         }
-    };
+    }, [params.id]);
 
     const handleSubmit = (e) => {
         e.preventDefault();

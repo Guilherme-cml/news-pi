@@ -8,7 +8,6 @@ import Nav from "@/components/Nav";
 export default function ProdutoForm({ params }) {
     const router = useRouter();
     const [error, setError] = useState(null);
-    const [categories, setCategories] = useState([]);
     const [produto, setProduto] = useState({
         title: '',
         price: '',
@@ -18,22 +17,10 @@ export default function ProdutoForm({ params }) {
     });
 
     useEffect(() => {
-        fetchCategories();
         if (params?.id) {
             fetchProduto(params.id);
         }
     }, [params]);
-
-    const fetchCategories = async () => {
-        try {
-            const response = await fetch('https://fakestoreapi.com/products/categories');
-            if (!response.ok) throw new Error('Erro ao carregar categorias');
-            const data = await response.json();
-            setCategories(data);
-        } catch (error) {
-            setError(error.message);
-        }
-    };
 
     const fetchProduto = (id) => {
         const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
@@ -101,19 +88,13 @@ export default function ProdutoForm({ params }) {
 
                     <Form.Group className="mb-3">
                         <Form.Label>Categoria</Form.Label>
-                        <Form.Select
+                        <Form.Control
+                            type="text"
                             name="category"
                             value={produto.category}
                             onChange={handleChange}
                             required
-                        >
-                            <option value="">Selecione uma categoria</option>
-                            {categories.map(cat => (
-                                <option key={cat} value={cat}>
-                                    {cat}
-                                </option>
-                            ))}
-                        </Form.Select>
+                        />
                     </Form.Group>
 
                     <Form.Group className="mb-3">
