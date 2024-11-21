@@ -1,36 +1,76 @@
-'use client';
+'use client'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { Card, Container, Row, Col, Button } from 'react-bootstrap'
+import Nav from '../../components/Nav'
 
-import { useEffect, useState } from "react";
-import Pagina from "@/app/components/Pagina";
-import { Button } from "react-bootstrap";
-import Link from "next/link";
+export default function UserPage() {
+  const [user, setUser] = useState(null)
+  const router = useRouter()
+  const currentUser = localStorage.getItem('currentUser')
+ 
 
-export default function UsuariosPage() {
-    const [usuarios, setUsuarios] = useState([]);
 
-    useEffect(() => {
-        const data = JSON.parse(localStorage.getItem('usuarios')) || [];
-        setUsuarios(data);
-    }, []);
+  useEffect(() => {
+    if (!currentUser) {
+      router.push('/login')
+      return
+    }
+    setUser(JSON.parse(currentUser))
+  }, [router])
 
-    const excluirUsuario = (id) => {
-        const novosUsuarios = usuarios.filter(usuario => usuario.id !== id);
-        localStorage.setItem('usuarios', JSON.stringify(novosUsuarios));
-        setUsuarios(novosUsuarios);
-    };
 
-    return (
-        <Pagina titulo="Usuários">
-            <Link href="/usuarios/form" className="btn btn-primary mb-3">Novo Usuário</Link>
-            <ul>
-                {usuarios.map(usuario => (
-                    <li key={usuario.id}>
-                        {usuario.nome} 
-                        <Link href={`/usuarios/form/${usuario.id}`}> Editar</Link>
-                        <Button onClick={() => excluirUsuario(usuario.id)}>Excluir</Button>
-                    </li>
-                ))}
-            </ul>
-        </Pagina>
-    );
-} 
+
+  const handleEdit = () => {
+    router.push('/usuarios/editar')
+  }
+
+  if (!user) {
+    return null
+  }
+
+  return (
+    <>
+      <Nav />
+      <Container className="py-5">
+
+        <h2 className="text-center mb-4">Perfil do Usuário</h2>
+
+        <div className="d-flex justify-content-end mb-3">
+          <Button variant="primary" onClick={handleEdit}>
+            Editar Perfil
+          </Button>
+        </div>
+
+        <Card className="mb-3">
+          <Card.Header className="bg-primary text-center text-white">
+            <h5 className="mb-0">Informações Pessoais</h5>
+          </Card.Header>
+          <Card.Body>
+            <p><strong>Nome:</strong> {user.name}</p>
+            <p><strong>Username:</strong> {user.username}</p>
+            <p><strong>Data de Nascimento:</strong> {user.birthdate}</p>
+          </Card.Body>
+        </Card>
+
+        <Card className="mb-3">
+          <Card.Header className="bg-primary text-center text-white">
+            <h5 className="mb-0">Informações de Contato</h5>
+          </Card.Header>
+          <Card.Body>
+            <p><strong>Email:</strong> {user.email}</p>
+            <p><strong>CPF:</strong> {user.cpf}</p>
+          </Card.Body>
+        </Card>
+
+        
+
+      </Container>
+
+
+
+
+     
+    </>
+  )
+}

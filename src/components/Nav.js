@@ -54,7 +54,7 @@ export default function Page() {
                         (<>
                             <Nav className="ms-auto">
 
-                                <Nav.Link as={Link} href="/user">
+                                <Nav.Link as={Link} href="/usuarios">
                                     Olá, {currentUser.username}
                                 </Nav.Link>
                                 <Nav.Link className="text-danger" onClick={handleLogout} style={{ cursor: 'pointer' }}>
