@@ -41,7 +41,7 @@ export default function LoginPage() {
         if (user.password === values.password) {
             localStorage.setItem('currentUser', JSON.stringify(user));
             alert("Login realizado com sucesso!");
-            router.push('/user');
+            router.push('/');
         } else {
             alert("Senha incorreta!");
         }
@@ -101,7 +101,7 @@ export default function LoginPage() {
                                         Entrar
                                     </Button>
 
-                                    <Link href="/signup" passHref>
+                                    <Link href="/cadastro" passHref>
                                         <Button variant="link">
                                             Não tem conta? Cadastre-se
                                         </Button>
