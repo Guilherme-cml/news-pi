@@ -38,8 +38,8 @@ export default function ProdutoDetalhes({ params }) {
                 <Card>
                     <div className="row g-0">
                         <div className="col-md-4">
-                            <Card.Img 
-                                src={produto.image} 
+                            <Card.Img
+                                src={produto.image}
                                 alt={produto.title}
                                 className="img-fluid rounded-start"
                                 style={{ objectFit: 'cover', height: '100%' }}
@@ -58,15 +58,15 @@ export default function ProdutoDetalhes({ params }) {
                                     {produto.description}
                                 </Card.Text>
                                 <div>
-                                    <Button 
-                                        variant="primary" 
+                                    <Button
+                                        variant="primary"
                                         onClick={() => router.push(`/produtos/detalhes?id=${produto.id}`)}
                                         className="me-2"
                                     >
                                         Editar
                                     </Button>
-                                    <Button 
-                                        variant="secondary" 
+                                    <Button
+                                        variant="secondary"
                                         onClick={() => router.push('/produtos')}
                                     >
                                         Voltar

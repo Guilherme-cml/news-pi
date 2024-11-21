@@ -64,12 +64,13 @@ export default function ProdutoForm({ params }) {
         <Pagina titulo="Editar Produto">
             <Container>
                 {error && <Alert variant="danger">{error}</Alert>}
-                
+
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3">
-                        <Form.Label>Título</Form.Label>
+                        <Form.Label htmlFor="title">Título</Form.Label>
                         <Form.Control
                             type="text"
+                            id="title"
                             name="title"
                             value={produto.title}
                             onChange={handleChange}
@@ -78,10 +79,11 @@ export default function ProdutoForm({ params }) {
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                        <Form.Label>Preço</Form.Label>
+                        <Form.Label htmlFor="price">Preço</Form.Label>
                         <Form.Control
                             type="number"
                             step="0.01"
+                            id="price"
                             name="price"
                             value={produto.price}
                             onChange={handleChange}
@@ -90,9 +92,10 @@ export default function ProdutoForm({ params }) {
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                        <Form.Label>Categoria</Form.Label>
+                        <Form.Label htmlFor="category">Categoria</Form.Label>
                         <Form.Control
                             as="select"
+                            id="category"
                             name="category"
                             value={produto.category}
                             onChange={handleChange}
@@ -112,9 +115,10 @@ export default function ProdutoForm({ params }) {
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                        <Form.Label>URL da Imagem</Form.Label>
+                        <Form.Label htmlFor="image">URL da Imagem</Form.Label>
                         <Form.Control
                             type="url"
+                            id="image"
                             name="image"
                             value={produto.image}
                             onChange={handleChange}
@@ -123,10 +127,11 @@ export default function ProdutoForm({ params }) {
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                        <Form.Label>Descrição</Form.Label>
+                        <Form.Label htmlFor="description">Descrição</Form.Label>
                         <Form.Control
                             as="textarea"
                             rows={3}
+                            id="description"
                             name="description"
                             value={produto.description}
                             onChange={handleChange}
@@ -137,8 +142,8 @@ export default function ProdutoForm({ params }) {
                     <Button type="submit" variant="primary">
                         Salvar
                     </Button>
-                    <Button 
-                        variant="secondary" 
+                    <Button
+                        variant="secondary"
                         className="ms-2"
                         onClick={() => router.push('/produtos')}
                     >

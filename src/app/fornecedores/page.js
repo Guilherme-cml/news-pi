@@ -25,7 +25,7 @@ export default function FornecedoresPage() {
             <ul>
                 {fornecedores.map(fornecedor => (
                     <li key={fornecedor.id}>
-                        {fornecedor.nome} 
+                        {fornecedor.nome}
                         <Link href={`/fornecedores/form/${fornecedor.id}`}> Editar</Link>
                         <Button onClick={() => excluirFornecedor(fornecedor.id)}>Excluir</Button>
                     </li>

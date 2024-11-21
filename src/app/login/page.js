@@ -25,19 +25,19 @@ export default function LoginPage() {
 
     function handleLogin(values) {
         const registeredUsers = getRegisteredUsers();
-        
+
         if (registeredUsers.length === 0) {
             alert("Nenhum usuário cadastrado!");
             return;
         }
-        
+
         const user = registeredUsers.find(user => user.email === values.email);
-        
+
         if (!user) {
             alert("Email não encontrado!");
             return;
         }
-        
+
         if (user.password === values.password) {
             localStorage.setItem('currentUser', JSON.stringify(user));
             alert("Login realizado com sucesso!");
@@ -72,6 +72,8 @@ export default function LoginPage() {
                                         <Form.Control
                                             type="email"
                                             name="email"
+                                            id="email"
+                                            autoComplete="email"
                                             value={values.email}
                                             onChange={handleChange}
                                             isInvalid={touched.email && !!errors.email}
@@ -87,6 +89,8 @@ export default function LoginPage() {
                                         <Form.Control
                                             type="password"
                                             name="password"
+                                            id="password"
+                                            autoComplete="current-password"
                                             value={values.password}
                                             onChange={handleChange}
                                             isInvalid={touched.password && !!errors.password}

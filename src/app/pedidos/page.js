@@ -25,7 +25,7 @@ export default function PedidosPage() {
             <ul>
                 {pedidos.map(pedido => (
                     <li key={pedido.id}>
-                        {pedido.nome} 
+                        {pedido.nome}
                         <Link href={`/pedidos/form/${pedido.id}`}> Editar</Link>
                         <Button onClick={() => excluirPedido(pedido.id)}>Excluir</Button>
                     </li>

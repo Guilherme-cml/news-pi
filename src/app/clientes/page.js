@@ -25,7 +25,7 @@ export default function ClientesPage() {
             <ul>
                 {clientes.map(cliente => (
                     <li key={cliente.id}>
-                        {cliente.nome} 
+                        {cliente.nome}
                         <Link href={`/clientes/form/${cliente.id}`}> Editar</Link>
                         <Button onClick={() => excluirCliente(cliente.id)}>Excluir</Button>
                     </li>

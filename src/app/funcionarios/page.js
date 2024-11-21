@@ -25,7 +25,7 @@ export default function FuncionariosPage() {
             <ul>
                 {funcionarios.map(funcionario => (
                     <li key={funcionario.id}>
-                        {funcionario.nome} 
+                        {funcionario.nome}
                         <Link href={`/funcionarios/form/${funcionario.id}`}> Editar</Link>
                         <Button onClick={() => excluirFuncionario(funcionario.id)}>Excluir</Button>
                     </li>

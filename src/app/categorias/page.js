@@ -26,25 +26,25 @@ export default function Home() {
       setProducts(produtosLocalStorage);
     } else {
       // Caso contrário, faça a chamada à API
-      
 
-          fetch('https://fakestoreapi.com/products')
-               .then(res => res.json())
-               .then(data => setProducts(data));
-        
+
+      fetch('https://fakestoreapi.com/products')
+        .then(res => res.json())
+        .then(data => setProducts(data));
+
     };
     if (categoriasLocalStorage && categoriasLocalStorage.length > 0) {
-        setCategories(categoriasLocalStorage);
+      setCategories(categoriasLocalStorage);
     } else {
-        fetch('https://fakestoreapi.com/products/categories')
+      fetch('https://fakestoreapi.com/products/categories')
         .then(res => res.json())
         .then(data => {
-            const categoriasComId = data.map(categoria => ({
-                id: v4(),
-                name: categoria
-            }));
-            setCategories(categoriasComId);
-            localStorage.setItem('categorias', JSON.stringify(categoriasComId));
+          const categoriasComId = data.map(categoria => ({
+            id: v4(),
+            name: categoria
+          }));
+          setCategories(categoriasComId);
+          localStorage.setItem('categorias', JSON.stringify(categoriasComId));
         });
     };
   }, []);
@@ -52,16 +52,16 @@ export default function Home() {
 
   const excluirCategoria = (id) => {
     if (window.confirm('Tem certeza que deseja excluir esta categoria?')) {
-        const novasCategorias = categories.filter(c => c.id !== id);
-        localStorage.setItem('categorias', JSON.stringify(novasCategorias));
-        setCategories(novasCategorias);
+      const novasCategorias = categories.filter(c => c.id !== id);
+      localStorage.setItem('categorias', JSON.stringify(novasCategorias));
+      setCategories(novasCategorias);
     }
-};
+  };
 
-  const filteredProducts = selectedCategory === 'all' 
-    ? products 
+  const filteredProducts = selectedCategory === 'all'
+    ? products
     : products.filter(product => product.category === selectedCategory);
-    console.log(categories)
+  console.log(categories)
 
   return (
     <>
@@ -72,8 +72,8 @@ export default function Home() {
           <Col md={3}>
             <h3>Categories</h3>
             <ListGroup className="mb-4">
-              <ListGroup.Item 
-                action 
+              <ListGroup.Item
+                action
                 active={selectedCategory === 'all'}
                 onClick={() => setSelectedCategory('all')}
               >
@@ -87,16 +87,18 @@ export default function Home() {
                   onClick={() => setSelectedCategory(category.name)}
                 >
                   {category.name}
-                  <Link href={`/categorias/form/${category.id}`}>
-                    <FaEdit />
-                  </Link>
-                  <Button
-                    variant="link" 
-                    className="text-danger p-0 ms-2"
-                    onClick={() => excluirCategoria(category.id)}
-                  >
-                    <FaTrash />
-                  </Button>
+                  <div className="float-end"> {/* Adicionando um contêiner para alinhar os ícones à direita */}
+                    <Link href={`/categorias/form/${category.id}`}>
+                      <FaEdit />
+                    </Link>
+                    <Button
+                      variant="link"
+                      className="text-danger p-0 ms-2"
+                      onClick={() => excluirCategoria(category.id)}
+                    >
+                      <FaTrash />
+                    </Button>
+                  </div>
                 </ListGroup.Item>
               ))}
             </ListGroup>
@@ -109,19 +111,19 @@ export default function Home() {
                 <Col key={product.id}>
                   <Card className="h-100">
                     <div style={{ height: '200px', padding: '1rem' }}>
-                      <Card.Img 
-                        variant="top" 
-                        src={product.image} 
-                        style={{ 
-                          height: '100%', 
-                          width: '100%', 
-                          objectFit: 'contain' 
-                        }} 
+                      <Card.Img
+                        variant="top"
+                        src={product.image}
+                        style={{
+                          height: '100%',
+                          width: '100%',
+                          objectFit: 'contain'
+                        }}
                       />
                     </div>
                     <Card.Body className="d-flex flex-column">
-                      <Card.Title 
-                        style={{ 
+                      <Card.Title
+                        style={{
                           fontSize: '1rem',
                           height: '3rem',
                           overflow: 'hidden'
@@ -132,8 +134,8 @@ export default function Home() {
                       <Card.Text className="text-muted mb-2">
                         ${product.price}
                       </Card.Text>
-                      <Button 
-                        variant="primary" 
+                      <Button
+                        variant="primary"
                         className="mt-auto"
                       >
                         Add to Cart

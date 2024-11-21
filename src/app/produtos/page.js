@@ -60,8 +60,8 @@ export default function ProdutosPage() {
                         {produtos.map(produto => (
                             <tr key={produto.id}>
                                 <td>
-                                    <img 
-                                        src={produto.image} 
+                                    <img
+                                        src={produto.image}
                                         alt={produto.title}
                                         style={{ width: '50px', height: '50px', objectFit: 'contain' }}
                                     />

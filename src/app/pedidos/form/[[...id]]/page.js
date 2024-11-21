@@ -43,27 +43,35 @@ export default function PedidoForm({ params }) {
             <Nav />
             <Container>
 
-            <Formik
-                initialValues={pedido}
-                validationSchema={PedidoValidator}
-                onSubmit={salvarPedido}
-            >
-                {({ handleChange, handleSubmit }) => (
-                    <Form onSubmit={handleSubmit}>
-                        <div>
-                            <label>Nome</label>
-                            <input name="nome" onChange={handleChange} />
-                        </div>
-                        <div>
-                            <label>Produto ID</label>
-                            <input name="produtoId" onChange={handleChange} />
-                        </div>
-                        <button type="submit">Salvar</button>
-                    </Form>
-                )}
-            </Formik>
+                <Formik
+                    initialValues={pedido}
+                    validationSchema={PedidoValidator}
+                    onSubmit={salvarPedido}
+                >
+                    {({ handleChange, handleSubmit }) => (
+                        <Form onSubmit={handleSubmit}>
+                            <div>
+                                <label htmlFor="nome">Nome</label>
+                                <input 
+                                    id="nome"
+                                    name="nome" 
+                                    onChange={handleChange} 
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="produtoId">Produto ID</label>
+                                <input 
+                                    id="produtoId"
+                                    name="produtoId" 
+                                    onChange={handleChange} 
+                                />
+                            </div>
+                            <button type="submit">Salvar</button>
+                        </Form>
+                    )}
+                </Formik>
             </Container>
         </>
-        
+
     );
 } 

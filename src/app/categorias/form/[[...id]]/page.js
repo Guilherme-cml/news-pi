@@ -18,11 +18,11 @@ export default function CategoriaForm({ params }) {
     const categorias = JSON.parse(localStorage.getItem('categorias')) || [];
     const categoriaEncontrada = categorias.find(c => c.id === params.id?.[0]);
     const dados = categoriaEncontrada || { name: '' };
-    
+
 
     // useEffect(() => {
     //     if (params.id) {
-           
+
     //         if (categoriaEncontrada) {
     //             setCategoria(categoriaEncontrada);
     //         }
@@ -48,38 +48,37 @@ export default function CategoriaForm({ params }) {
         <>
             <Nav />
             <Container>
-            <Formik
-                            initialValues={dados}
-                            validationSchema={CategoriaValidator}
-                            onSubmit={salvarCategoria}
-                        >
-                            {({
-                                values,
-                                handleChange,
-                                handleSubmit
-                            }) => (
-                                <Form onSubmit={handleSubmit}>
-                                    <Form.Group className="mb-3" controlId="name">
-                                        <Form.Label>Nome da Categoria</Form.Label>
-                                        <Form.Control
-                                            type="text"
-                                            name="name"
-                                            value={values.name}
-                                            onChange={handleChange}
+                <Formik
+                    initialValues={dados}
+                    validationSchema={CategoriaValidator}
+                    onSubmit={salvarCategoria}
+                >
+                    {({
+                        values,
+                        handleChange,
+                        handleSubmit
+                    }) => (
+                        <Form onSubmit={handleSubmit}>
+                            <Form.Group className="mb-3" controlId="name">
+                                <Form.Label>Nome da Categoria</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="name"
+                                    value={values.name}
+                                    onChange={handleChange}
+                                    placeholder="Nome da Categoria"
+                                    autoComplete="off"
+                                />
+                            </Form.Group>
 
-                                            placeholder="Nome da Categoria"
-                                        />
-                            
-                                    </Form.Group>
+                            <Button variant="primary" type="submit">
+                                Salvar
+                            </Button>
+                        </Form>
+                    )}
+                </Formik>
 
-                                    <Button variant="primary" type="submit">
-                                        Salvar
-                                    </Button>
-                                </Form>
-                            )}
-                        </Formik>
-
-            {/* <Formik
+                {/* <Formik
                 initialValues={categoria}
                 validationSchema={CategoriaValidator}
                 onSubmit={salvarCategoria}
