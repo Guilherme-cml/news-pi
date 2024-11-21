@@ -11,6 +11,7 @@ export default function ProdutoDetalhes({ params }) {
     const [produto, setProduto] = useState(null);
     const [comment, setComment] = useState('');
     const [comments, setComments] = useState([]);
+    const [cartItems, setCartItems] = useState([]);
     const { id } = useParams();
     const savedComments = localStorage.getItem(`comments-${id}`)
 
@@ -68,6 +69,25 @@ export default function ProdutoDetalhes({ params }) {
         setComments(updatedComments);
         setEditingCommentId(null);
       };
+      const addToCart = (product) => {
+        const currentCart = JSON.parse(localStorage.getItem('cart') || '[]');
+        const existingItemIndex = currentCart.findIndex(item => item.id === product.id);
+        
+        if (existingItemIndex > -1) {
+            currentCart[existingItemIndex].quantity += 1;
+        } else {
+            currentCart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                quantity: 1
+            });
+        }
+        
+        localStorage.setItem('cart', JSON.stringify(currentCart));
+        setCartItems(currentCart); // If you're using the cart state in the component
+    };
 
     if (!produto) {
         return (
@@ -114,6 +134,13 @@ export default function ProdutoDetalhes({ params }) {
                                         className="me-2"
                                     >
                                         Editar
+                                    </Button>
+                                    <Button
+                                        variant="primary"
+                                        onClick={() => addToCart(produto)}
+                                        className="me-2"
+                                    >
+                                        Adicionar ao Carrinho
                                     </Button>
                                     <Button
                                         variant="secondary"
