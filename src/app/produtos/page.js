@@ -70,10 +70,13 @@ export default function ProdutosPage() {
                                 <td>{produto.category}</td>
                                 <td>R$ {produto.price}</td>
                                 <td>
+                                    <Link href={`/produtos/detalhes/${produto.id}`} className="btn btn-primary me-2">
+                                        Ver
+                                    </Link>
                                     <Link href={`/produtos/form/${produto.id}`} className="btn btn-warning me-2">
                                         Editar
                                     </Link>
-                                    <Button variant="danger" onClick={() => excluirProduto(produto.id)}>
+                                    <Button className="mt-2 btn btn-danger" onClick={() => excluirProduto(produto.id)}>
                                         Excluir
                                     </Button>
                                 </td>
