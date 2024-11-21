@@ -40,3 +40,5 @@ a {
     color-scheme: dark;
   }
 }
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
