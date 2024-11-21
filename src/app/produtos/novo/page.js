@@ -1,13 +1,14 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import Pagina from "@/app/components/Pagina";
 import { Form, Button, Alert, Container } from "react-bootstrap";
 import { useRouter } from "next/navigation";
+import Nav from "@/components/Nav";
 
 export default function ProdutoForm({ params }) {
     const router = useRouter();
     const [error, setError] = useState(null);
+    const [categories, setCategories] = useState([]);
     const [produto, setProduto] = useState({
         title: '',
         price: '',
@@ -17,24 +18,28 @@ export default function ProdutoForm({ params }) {
     });
 
     useEffect(() => {
-        fetchProduto(params.id);
-    }, [params.id]);
+        fetchCategories();
+        if (params?.id) {
+            fetchProduto(params.id);
+        }
+    }, [params]);
 
-    const fetchProduto = async (id) => {
+    const fetchCategories = async () => {
+        try {
+            const response = await fetch('https://fakestoreapi.com/products/categories');
+            if (!response.ok) throw new Error('Erro ao carregar categorias');
+            const data = await response.json();
+            setCategories(data);
+        } catch (error) {
+            setError(error.message);
+        }
+    };
+
+    const fetchProduto = (id) => {
         const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
         const produtoEncontrado = produtos.find(p => p.id === id);
-
         if (produtoEncontrado) {
             setProduto(produtoEncontrado);
-        } else {
-            try {
-                const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-                if (!response.ok) throw new Error('Erro ao carregar produto da API');
-                const produtoApi = await response.json();
-                setProduto(produtoApi);
-            } catch (error) {
-                setError(error.message);
-            }
         }
     };
 
@@ -42,11 +47,11 @@ export default function ProdutoForm({ params }) {
         e.preventDefault();
         try {
             const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-            const index = produtos.findIndex(p => p.id === params.id);
-            if (index !== -1) {
+            if (params?.id) {
+                const index = produtos.findIndex(p => p.id === params.id);
                 produtos[index] = { ...produtos[index], ...produto };
             } else {
-                produto.id = Date.now();
+                produto.id = Date.now(); // Gera um ID único
                 produtos.push(produto);
             }
             localStorage.setItem('produtos', JSON.stringify(produtos));
@@ -65,7 +70,8 @@ export default function ProdutoForm({ params }) {
     };
 
     return (
-        <Pagina titulo="Editar Produto">
+        <>
+            <Nav />
             <Container>
                 {error && <Alert variant="danger">{error}</Alert>}
                 
@@ -95,13 +101,19 @@ export default function ProdutoForm({ params }) {
 
                     <Form.Group className="mb-3">
                         <Form.Label>Categoria</Form.Label>
-                        <Form.Control
-                            type="text"
+                        <Form.Select
                             name="category"
                             value={produto.category}
                             onChange={handleChange}
                             required
-                        />
+                        >
+                            <option value="">Selecione uma categoria</option>
+                            {categories.map(cat => (
+                                <option key={cat} value={cat}>
+                                    {cat}
+                                </option>
+                            ))}
+                        </Form.Select>
                     </Form.Group>
 
                     <Form.Group className="mb-3">
@@ -139,6 +151,6 @@ export default function ProdutoForm({ params }) {
                     </Button>
                 </Form>
             </Container>
-        </Pagina>
+        </>
     );
 } 

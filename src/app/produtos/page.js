@@ -12,15 +12,21 @@ export default function ProdutosPage() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        loadLocalStorageProdutos();
         fetchProdutos();
     }, []);
+
+    const loadLocalStorageProdutos = () => {
+        const produtosLocalStorage = JSON.parse(localStorage.getItem('produtos')) || [];
+        setProdutos(produtosLocalStorage);
+    };
 
     const fetchProdutos = async () => {
         try {
             const response = await fetch('https://fakestoreapi.com/products');
             if (!response.ok) throw new Error('Erro ao carregar produtos');
             const data = await response.json();
-            setProdutos(data);
+            setProdutos(prevProdutos => [...prevProdutos, ...data]);
         } catch (error) {
             setError(error.message);
         } finally {
@@ -44,9 +50,7 @@ export default function ProdutosPage() {
 
     if (loading) return (
         <Container>
-
             <Spinner animation="border" />
-        
         </Container>
     );
 
@@ -60,44 +64,42 @@ export default function ProdutosPage() {
         <>
             <Nav />
             <Container>
-
-            <Link href="/produtos/form" className="btn btn-primary mb-3">Novo Produto</Link>
-            
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>Imagem</th>
-                        <th>Título</th>
-                        <th>Categoria</th>
-                        <th>Preço</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {produtos.map(produto => (
-                        <tr key={produto.id}>
-                            <td>
-                                <img 
-                                    src={produto.image} 
-                                    alt={produto.title}
-                                    style={{ width: '50px', height: '50px', objectFit: 'contain' }}
-                                />
-                            </td>
-                            <td>{produto.title}</td>
-                            <td>{produto.category}</td>
-                            <td>R$ {produto.price}</td>
-                            <td>
-                                <Link href={`/produtos/form/${produto.id}`} className="btn btn-warning me-2">
-                                    Editar
-                                </Link>
-                                <Button variant="danger" onClick={() => excluirProduto(produto.id)}>
-                                    Excluir
-                                </Button>
-                            </td>
+                <Link href="/produtos/novo" className="btn btn-primary mb-3">Novo Produto</Link>
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>Imagem</th>
+                            <th>Título</th>
+                            <th>Categoria</th>
+                            <th>Preço</th>
+                            <th>Ações</th>
                         </tr>
-                    ))}
-                </tbody>
-            </Table>
+                    </thead>
+                    <tbody>
+                        {produtos.map(produto => (
+                            <tr key={produto.id}>
+                                <td>
+                                    <img 
+                                        src={produto.image} 
+                                        alt={produto.title}
+                                        style={{ width: '50px', height: '50px', objectFit: 'contain' }}
+                                    />
+                                </td>
+                                <td>{produto.title}</td>
+                                <td>{produto.category}</td>
+                                <td>R$ {produto.price}</td>
+                                <td>
+                                    <Link href={`/produtos/form/${produto.id}`} className="btn btn-warning me-2">
+                                        Editar
+                                    </Link>
+                                    <Button variant="danger" onClick={() => excluirProduto(produto.id)}>
+                                        Excluir
+                                    </Button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </Table>
             </Container>
         </>
     );
