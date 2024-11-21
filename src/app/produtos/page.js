@@ -1,36 +1,104 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import Pagina from "@/app/components/Pagina";
-import { Button } from "react-bootstrap";
+
+import { Button, Table, Spinner, Alert, Container } from "react-bootstrap";
 import Link from "next/link";
+import Nav from "@/components/Nav";
 
 export default function ProdutosPage() {
     const [produtos, setProdutos] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem('produtos')) || [];
-        setProdutos(data);
+        fetchProdutos();
     }, []);
 
-    const excluirProduto = (id) => {
-        const novosProdutos = produtos.filter(produto => produto.id !== id);
-        localStorage.setItem('produtos', JSON.stringify(novosProdutos));
-        setProdutos(novosProdutos);
+    const fetchProdutos = async () => {
+        try {
+            const response = await fetch('https://fakestoreapi.com/products');
+            if (!response.ok) throw new Error('Erro ao carregar produtos');
+            const data = await response.json();
+            setProdutos(data);
+        } catch (error) {
+            setError(error.message);
+        } finally {
+            setLoading(false);
+        }
     };
 
+    const excluirProduto = async (id) => {
+        if (window.confirm('Tem certeza que deseja excluir este produto?')) {
+            try {
+                const response = await fetch(`https://fakestoreapi.com/products/${id}`, {
+                    method: 'DELETE',
+                });
+                if (!response.ok) throw new Error('Erro ao excluir produto');
+                setProdutos(produtos.filter(p => p.id !== id));
+            } catch (error) {
+                setError(error.message);
+            }
+        }
+    };
+
+    if (loading) return (
+        <Container>
+
+            <Spinner animation="border" />
+        
+        </Container>
+    );
+
+    if (error) return (
+        <Container>
+            <Alert variant="danger">{error}</Alert>
+        </Container>
+    );
+
     return (
-        <Pagina titulo="Produtos">
+        <>
+            <Nav />
+            <Container>
+
             <Link href="/produtos/form" className="btn btn-primary mb-3">Novo Produto</Link>
-            <ul>
-                {produtos.map(produto => (
-                    <li key={produto.id}>
-                        {produto.nome} 
-                        <Link href={`/produtos/form/${produto.id}`}> Editar</Link>
-                        <Button onClick={() => excluirProduto(produto.id)}>Excluir</Button>
-                    </li>
-                ))}
-            </ul>
-        </Pagina>
+            
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                        <th>Imagem</th>
+                        <th>Título</th>
+                        <th>Categoria</th>
+                        <th>Preço</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {produtos.map(produto => (
+                        <tr key={produto.id}>
+                            <td>
+                                <img 
+                                    src={produto.image} 
+                                    alt={produto.title}
+                                    style={{ width: '50px', height: '50px', objectFit: 'contain' }}
+                                />
+                            </td>
+                            <td>{produto.title}</td>
+                            <td>{produto.category}</td>
+                            <td>R$ {produto.price}</td>
+                            <td>
+                                <Link href={`/produtos/form/${produto.id}`} className="btn btn-warning me-2">
+                                    Editar
+                                </Link>
+                                <Button variant="danger" onClick={() => excluirProduto(produto.id)}>
+                                    Excluir
+                                </Button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </Table>
+            </Container>
+        </>
     );
 } 

@@ -35,9 +35,9 @@ export default function Page() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link href="/products">Products</Nav.Link>
-                        <Nav.Link href="/categorias">Categories</Nav.Link>
-                        <Nav.Link href="/cart">Cart</Nav.Link>
+                        <Nav.Link href="/produtos">Produtos</Nav.Link>
+                        <Nav.Link href="/categorias">Categorias</Nav.Link>
+                        <Nav.Link href="/cart">Carrinho</Nav.Link>
                     </Nav>
                     {currentUser ?
                         (<>

@@ -1,10 +1,10 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import Pagina from "@/app/components/Pagina";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { useRouter } from "next/navigation";
+import { v4 } from "uuid";
 
 const PedidoValidator = Yup.object().shape({
     nome: Yup.string().required("Nome é obrigatório"),
@@ -31,7 +31,7 @@ export default function PedidoForm({ params }) {
             const index = pedidos.findIndex(p => p.id === params.id);
             pedidos[index] = { ...pedidos[index], ...values };
         } else {
-            values.id = Date.now();
+            values.id = v4();
             pedidos.push(values);
         }
         localStorage.setItem('pedidos', JSON.stringify(pedidos));
@@ -39,7 +39,10 @@ export default function PedidoForm({ params }) {
     };
 
     return (
-        <Pagina titulo={params.id ? "Editar Pedido" : "Novo Pedido"}>
+        <>
+            <Nav />
+            <Container>
+
             <Formik
                 initialValues={pedido}
                 validationSchema={PedidoValidator}
@@ -59,6 +62,8 @@ export default function PedidoForm({ params }) {
                     </Form>
                 )}
             </Formik>
-        </Pagina>
+            </Container>
+        </>
+        
     );
 } 
