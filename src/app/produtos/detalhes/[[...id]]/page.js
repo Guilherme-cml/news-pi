@@ -11,6 +11,7 @@ export default function ProdutoDetalhes({ params }) {
     const [produto, setProduto] = useState(null);
     const [comment, setComment] = useState('');
     const [comments, setComments] = useState([]);
+    const [message, setMessage] = useState(null);
     const [cartItems, setCartItems] = useState([]);
     const { id } = useParams();
     const savedComments = localStorage.getItem(`comments-${id}`)
@@ -67,7 +68,7 @@ export default function ProdutoDetalhes({ params }) {
         });
         localStorage.setItem(`comments-${id}`, JSON.stringify(updatedComments));
         setComments(updatedComments);
-        setEditingCommentId(null);
+        
       };
       const addToCart = (product) => {
         const currentCart = JSON.parse(localStorage.getItem('cart') || '[]');
