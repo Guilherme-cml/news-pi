@@ -37,7 +37,7 @@ export default function ProdutoForm({ params }) {
         e.preventDefault();
         try {
             const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-            const index = produtos.findIndex(p => p.id === params.id);
+            const index = produtos.findIndex(p => p.id === p.id);
             if (index !== -1) {
                 produtos[index] = { ...produtos[index], ...produto };
             } else {
