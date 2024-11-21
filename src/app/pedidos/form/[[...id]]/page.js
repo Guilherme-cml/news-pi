@@ -1,0 +1,64 @@
+'use client';
+
+import { useEffect, useState } from "react";
+import Pagina from "@/app/components/Pagina";
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+import { useRouter } from "next/navigation";
+
+const PedidoValidator = Yup.object().shape({
+    nome: Yup.string().required("Nome é obrigatório"),
+    produtoId: Yup.string().required("Produto é obrigatório"),
+});
+
+export default function PedidoForm({ params }) {
+    const router = useRouter();
+    const [pedido, setPedido] = useState({ nome: '', produtoId: '' });
+
+    useEffect(() => {
+        if (params.id) {
+            const pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
+            const pedidoEncontrado = pedidos.find(p => p.id === params.id);
+            if (pedidoEncontrado) {
+                setPedido(pedidoEncontrado);
+            }
+        }
+    }, [params.id]);
+
+    const salvarPedido = (values) => {
+        const pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
+        if (params.id) {
+            const index = pedidos.findIndex(p => p.id === params.id);
+            pedidos[index] = { ...pedidos[index], ...values };
+        } else {
+            values.id = Date.now();
+            pedidos.push(values);
+        }
+        localStorage.setItem('pedidos', JSON.stringify(pedidos));
+        router.push('/pedidos');
+    };
+
+    return (
+        <Pagina titulo={params.id ? "Editar Pedido" : "Novo Pedido"}>
+            <Formik
+                initialValues={pedido}
+                validationSchema={PedidoValidator}
+                onSubmit={salvarPedido}
+            >
+                {({ handleChange, handleSubmit }) => (
+                    <Form onSubmit={handleSubmit}>
+                        <div>
+                            <label>Nome</label>
+                            <input name="nome" onChange={handleChange} />
+                        </div>
+                        <div>
+                            <label>Produto ID</label>
+                            <input name="produtoId" onChange={handleChange} />
+                        </div>
+                        <button type="submit">Salvar</button>
+                    </Form>
+                )}
+            </Formik>
+        </Pagina>
+    );
+} 
