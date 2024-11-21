@@ -1,7 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
-
+import { FaTrash } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
 import Navbar from 'react-bootstrap/Navbar';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
@@ -9,6 +10,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Nav from '@/components/Nav';
+import { v4 } from 'uuid';
+import Link from 'next/link';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -16,20 +19,49 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   useEffect(() => {
-    // Fetch products
-    fetch('https://fakestoreapi.com/products')
-      .then(res => res.json())
-      .then(data => setProducts(data));
+    const produtosLocalStorage = JSON.parse(localStorage.getItem('produtos'));
+    const categoriasLocalStorage = JSON.parse(localStorage.getItem('categorias'));
+    if (produtosLocalStorage && produtosLocalStorage.length > 0) {
+      // Se já existem produtos no localStorage, use-os
+      setProducts(produtosLocalStorage);
+    } else {
+      // Caso contrário, faça a chamada à API
+      
 
-    // Fetch categories
-    fetch('https://fakestoreapi.com/products/categories')
-      .then(res => res.json())
-      .then(data => setCategories(data));
+          fetch('https://fakestoreapi.com/products')
+               .then(res => res.json())
+               .then(data => setProducts(data));
+        
+    };
+    if (categoriasLocalStorage && categoriasLocalStorage.length > 0) {
+        setCategories(categoriasLocalStorage);
+    } else {
+        fetch('https://fakestoreapi.com/products/categories')
+        .then(res => res.json())
+        .then(data => {
+            const categoriasComId = data.map(categoria => ({
+                id: v4(),
+                name: categoria
+            }));
+            setCategories(categoriasComId);
+            localStorage.setItem('categorias', JSON.stringify(categoriasComId));
+        });
+    };
   }, []);
+
+
+  const excluirCategoria = (id) => {
+    if (window.confirm('Tem certeza que deseja excluir esta categoria?')) {
+        const novasCategorias = categories.filter(c => c.id !== id);
+        localStorage.setItem('categorias', JSON.stringify(novasCategorias));
+        setCategories(novasCategorias);
+    }
+};
 
   const filteredProducts = selectedCategory === 'all' 
     ? products 
     : products.filter(product => product.category === selectedCategory);
+    console.log(categories)
 
   return (
     <>
@@ -49,15 +81,26 @@ export default function Home() {
               </ListGroup.Item>
               {categories.map(category => (
                 <ListGroup.Item
-                  key={category}
+                  key={category.id}
                   action
-                  active={selectedCategory === category}
-                  onClick={() => setSelectedCategory(category)}
+                  active={selectedCategory === category.name}
+                  onClick={() => setSelectedCategory(category.name)}
                 >
-                  {category}
+                  {category.name}
+                  <Link href={`/categorias/form/${category.id}`}>
+                    <FaEdit />
+                  </Link>
+                  <Button
+                    variant="link" 
+                    className="text-danger p-0 ms-2"
+                    onClick={() => excluirCategoria(category.id)}
+                  >
+                    <FaTrash />
+                  </Button>
                 </ListGroup.Item>
               ))}
             </ListGroup>
+            <Button href="/categorias/form">Nova Categoria</Button>
           </Col>
 
           <Col md={9}>

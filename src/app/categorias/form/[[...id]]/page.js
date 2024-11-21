@@ -1,10 +1,13 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import Pagina from "@/app/components/Pagina";
-import { Formik, Form } from "formik";
+
+import { Formik } from "formik";
+import { Button, Container, Form } from "react-bootstrap";
 import * as Yup from "yup";
 import { useRouter } from "next/navigation";
+import { v4 } from "uuid";
+import Nav from "@/components/Nav";
 
 const CategoriaValidator = Yup.object().shape({
     nome: Yup.string().required("Nome é obrigatório"),
@@ -12,25 +15,28 @@ const CategoriaValidator = Yup.object().shape({
 
 export default function CategoriaForm({ params }) {
     const router = useRouter();
-    const [categoria, setCategoria] = useState({ nome: '' });
+    const categorias = JSON.parse(localStorage.getItem('categorias')) || [];
+    const categoriaEncontrada = categorias.find(c => c.id === params.id);
+    const dados = categoriaEncontrada || { name: '' };
+    
 
-    useEffect(() => {
-        if (params.id) {
-            const categorias = JSON.parse(localStorage.getItem('categorias')) || [];
-            const categoriaEncontrada = categorias.find(c => c.id === params.id);
-            if (categoriaEncontrada) {
-                setCategoria(categoriaEncontrada);
-            }
-        }
-    }, [params.id]);
+    // useEffect(() => {
+    //     if (params.id) {
+           
+    //         if (categoriaEncontrada) {
+    //             setCategoria(categoriaEncontrada);
+    //         }
+    //     }
+    // }, [params.id]);
 
     const salvarCategoria = (values) => {
         const categorias = JSON.parse(localStorage.getItem('categorias')) || [];
         if (params.id) {
+            Object.assign(dados, values);
             const index = categorias.findIndex(c => c.id === params.id);
             categorias[index] = { ...categorias[index], ...values };
         } else {
-            values.id = Date.now();
+            values.id = v4();
             categorias.push(values);
         }
         localStorage.setItem('categorias', JSON.stringify(categorias));
@@ -38,8 +44,41 @@ export default function CategoriaForm({ params }) {
     };
 
     return (
-        <Pagina titulo={params.id ? "Editar Categoria" : "Nova Categoria"}>
+        <>
+            <Nav />
+            <Container>
             <Formik
+                            initialValues={dados}
+                            validationSchema={CategoriaValidator}
+                            onSubmit={salvarCategoria}
+                        >
+                            {({
+                                values,
+                                handleChange,
+                                handleSubmit
+                            }) => (
+                                <Form onSubmit={handleSubmit}>
+                                    <Form.Group className="mb-3" controlId="email">
+                                        <Form.Label>Nome da Categoria</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            name="name"
+                                            value={values.name}
+                                            onChange={handleChange}
+
+                                            placeholder="Nome da Categoria"
+                                        />
+                            
+                                    </Form.Group>
+
+                                    <Button onClick={() => salvarCategoria(values)} variant="primary" type="submit">
+                                        Salvar
+                                    </Button>
+                                </Form>
+                            )}
+                        </Formik>
+
+            {/* <Formik
                 initialValues={categoria}
                 validationSchema={CategoriaValidator}
                 onSubmit={salvarCategoria}
@@ -50,10 +89,11 @@ export default function CategoriaForm({ params }) {
                             <label>Nome</label>
                             <input name="nome" onChange={handleChange} />
                         </div>
-                        <button type="submit">Salvar</button>
+                        <Button type="submit">Salvar</button>
                     </Form>
                 )}
-            </Formik>
-        </Pagina>
+            </Formik> */}
+            </Container>
+        </>
     );
 } 
