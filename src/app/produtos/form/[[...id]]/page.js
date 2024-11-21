@@ -15,7 +15,7 @@ export default function FormProduto({ params }) {
         category: '',
         image: ''
     });
-
+    const [categorias, setCategorias] = useState([]);
     useEffect(() => {
         if (params.id) {
             const produtos = JSON.parse(localStorage.getItem('produtos')) || []
@@ -25,8 +25,12 @@ export default function FormProduto({ params }) {
             }
         }
     }, [params])
-
-    function handleSubmit(e) {
+    
+    useEffect(() => {
+        const categoriasStorage = JSON.parse(localStorage.getItem('categorias')) || [];
+        setCategorias(categoriasStorage);
+    }, []);
+        function handleSubmit(e) {
         e.preventDefault()
 
         // Validação básica
@@ -123,10 +127,11 @@ export default function FormProduto({ params }) {
                                     required
                                 >
                                     <option value="">Selecione uma categoria</option>
-                                    <option value="electronics">Eletrônicos</option>
-                                    <option value="jewelery">Joias</option>
-                                    <option value="men's clothing">Roupas Masculinas</option>
-                                    <option value="women's clothing">Roupas Femininas</option>
+                                    {categorias.map(categoria => (
+                                        <option key={categoria.id} value={categoria.id}>
+                                            {categoria.name}
+                                        </option>
+                                    ))}
                                 </Form.Select>
                             </Form.Group>
 
