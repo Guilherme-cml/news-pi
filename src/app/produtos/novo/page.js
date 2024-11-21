@@ -102,11 +102,15 @@ export default function ProdutoForm({ params }) {
                             required
                         >
                             <option value="">Selecione uma categoria</option>
-                            {categories.map(category => (
-                                <option key={category} value={category}>
-                                    {category}
-                                </option>
-                            ))}
+                            {categories.length > 0 ? (
+                                categories.map(category => (
+                                    <option key={category.id} value={category.name}>
+                                        {category.name}
+                                    </option>
+                                ))
+                            ) : (
+                                <option disabled>Sem categorias disponíveis</option>
+                            )}
                         </Form.Control>
                     </Form.Group>
 

@@ -22,9 +22,6 @@ export default function ProdutoForm({ params }) {
         const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
         const id = Array.isArray(params.id) ? params.id[0] : params.id;
 
-        console.log('Produtos no localStorage:', produtos);
-        console.log('ID do produto a ser editado:', id);
-
         const produtoEncontrado = produtos.find(p => p.id === id);
 
         if (produtoEncontrado) {
@@ -33,7 +30,6 @@ export default function ProdutoForm({ params }) {
             setError('Produto não encontrado no localStorage');
         }
 
-        // Carregar categorias do localStorage
         const storedCategories = JSON.parse(localStorage.getItem('categorias')) || [];
         setCategories(storedCategories);
     }, [params.id]);
@@ -42,7 +38,7 @@ export default function ProdutoForm({ params }) {
         e.preventDefault();
         try {
             const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-            const index = produtos.findIndex(p => p.id === p.id);
+            const index = produtos.findIndex(p => p.id === produto.id);
             if (index !== -1) {
                 produtos[index] = { ...produtos[index], ...produto };
             } else {
@@ -103,11 +99,15 @@ export default function ProdutoForm({ params }) {
                             required
                         >
                             <option value="">Selecione uma categoria</option>
-                            {categories.map(category => (
-                                <option key={category} value={category}>
-                                    {category}
-                                </option>
-                            ))}
+                            {categories.length > 0 ? (
+                                categories.map(category => (
+                                    <option key={category.id} value={category.name}>
+                                        {category.name}
+                                    </option>
+                                ))
+                            ) : (
+                                <option disabled>Sem categorias disponíveis</option>
+                            )}
                         </Form.Control>
                     </Form.Group>
 
