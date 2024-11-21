@@ -9,6 +9,7 @@ import { v4 } from "uuid";
 export default function ProdutoDetalhes({ params }) {
     const router = useRouter();
     const [produto, setProduto] = useState(null);
+    const [produtosRelacionados, setProdutosRelacionados] = useState([]);
     const [comment, setComment] = useState('');
     const [comments, setComments] = useState([]);
     const [cartItems, setCartItems] = useState([]);
@@ -20,8 +21,16 @@ export default function ProdutoDetalhes({ params }) {
         if (id) {
             const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
             const produtoEncontrado = produtos.find(p => p.id === id);
+            
             if (produtoEncontrado) {
                 setProduto(produtoEncontrado);
+                
+                const relacionados = produtos.filter(p => 
+                    p.category === produtoEncontrado.category && 
+                    p.id !== produtoEncontrado.id
+                ).slice(0, 4);
+                
+                setProdutosRelacionados(relacionados);
             }
         }
         if (savedComments) {
@@ -127,25 +136,29 @@ export default function ProdutoDetalhes({ params }) {
                                 <Card.Text className="mb-4">
                                     {produto.description}
                                 </Card.Text>
-                                <div>
+                                <div className="d-flex gap-2">
                                     <Button
-                                        variant="primary"
-                                        onClick={() => router.push(`/produtos/detalhes?id=${produto.id}`)}
-                                        className="me-2"
+                                        variant="outline-primary"
+                                        onClick={() => router.push(`/produtos/form/${produto.id}`)}
+                                        className="px-4"
                                     >
+                                        <i className="bi bi-pencil me-2"></i>
                                         Editar
                                     </Button>
                                     <Button
                                         variant="primary"
                                         onClick={() => addToCart(produto)}
-                                        className="me-2"
+                                        className="px-4"
                                     >
+                                        <i className="bi bi-cart-plus me-2"></i>
                                         Adicionar ao Carrinho
                                     </Button>
                                     <Button
-                                        variant="secondary"
+                                        variant="outline-secondary"
                                         onClick={() => router.push('/produtos')}
+                                        className="px-4"
                                     >
+                                        <i className="bi bi-arrow-left me-2"></i>
                                         Voltar
                                     </Button>
                                 </div>
@@ -153,6 +166,63 @@ export default function ProdutoDetalhes({ params }) {
                         </div>
                     </div>
                 </Card>
+
+                {produtosRelacionados.length > 0 && (
+                    <div className="mt-5">
+                        <h3 className="mb-4">Produtos Relacionados</h3>
+                        <Row>
+                            {produtosRelacionados.map((produtoRel) => (
+                                <Col key={produtoRel.id} md={3} className="mb-3">
+                                    <Card style={{ height: '100%' }}>
+                                        <div style={{ 
+                                            height: '200px', 
+                                            overflow: 'hidden',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            backgroundColor: '#f8f9fa'
+                                        }}>
+                                            <Card.Img
+                                                variant="top"
+                                                src={produtoRel.image}
+                                                style={{ 
+                                                    width: '100%',
+                                                    height: '100%',
+                                                    objectFit: 'contain',
+                                                    padding: '10px'
+                                                }}
+                                            />
+                                        </div>
+                                        <Card.Body className="d-flex flex-column">
+                                            <Card.Title className="h5" style={{ 
+                                                overflow: 'hidden',
+                                                textOverflow: 'ellipsis',
+                                                display: '-webkit-box',
+                                                WebkitLineClamp: 2,
+                                                WebkitBoxOrient: 'vertical',
+                                                minHeight: '48px'
+                                            }}>
+                                                {produtoRel.title}
+                                            </Card.Title>
+                                            <Card.Text className="text-primary">
+                                                R$ {Number(produtoRel.price).toFixed(2)}
+                                            </Card.Text>
+                                            <Button
+                                                variant="outline-primary"
+                                                size="sm"
+                                                onClick={() => router.push(`/produtos/detalhes/${produtoRel.id}`)}
+                                                className="mt-auto"
+                                            >
+                                                Ver Detalhes
+                                            </Button>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            ))}
+                        </Row>
+                    </div>
+                )}
+
                 <Row className="mb-5 mt-4" >
         <Col>
           <h3>Comentários</h3>

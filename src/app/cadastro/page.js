@@ -27,36 +27,48 @@ export default function SignUpPage() {
 
     function handleRegister(values) {
         try {
+            // Verifica se todos os campos obrigatórios estão preenchidos
+            const requiredFields = ['email', 'password', 'name', 'username', 'birthdate', 'cpf'];
+            const emptyFields = requiredFields.filter(field => !values[field]);
+            
+            if (emptyFields.length > 0) {
+                alert("Por favor, preencha todos os campos obrigatórios!");
+                return;
+            }
+
             const registeredUsers = getRegisteredUsers();
 
-            // Check if email already exists
-            const emailExists = registeredUsers.some(user => user.email === values.email);
-            if (emailExists) {
-                alert("Este email já está cadastrado!");
-                return;
+            // Verifica email existente apenas se o email for válido
+            if (values.email) {
+                const emailExists = registeredUsers.some(user => user.email === values.email);
+                if (emailExists) {
+                    alert("Este email já está cadastrado!");
+                    return;
+                }
             }
 
-            // Check if username already exists
-            const usernameExists = registeredUsers.some(user => user.username === values.username);
-            if (usernameExists) {
-                alert("Este username já está em uso!");
-                return;
+            // Verifica username existente apenas se o username for válido
+            if (values.username) {
+                const usernameExists = registeredUsers.some(user => user.username === values.username);
+                if (usernameExists) {
+                    alert("Este username já está em uso!");
+                    return;
+                }
             }
 
-            let newUser = {
+            // Remove o confirmPassword antes de salvar
+            const { confirmPassword, ...userData } = values;
+
+            // Criar novo usuário com ID
+            const newUser = {
                 id: v4(),
-                email: values.email,
-                password: values.password,
-                name: values.name,
-                username: values.username,
-                birthdate: values.birthdate,
-                cpf: values.cpf
+                ...userData
             };
 
-            // Add new user to the array
+            // Adicionar novo usuário ao array
             registeredUsers.push(newUser);
 
-            // Save updated array back to localStorage
+            // Salvar array atualizado no localStorage
             localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
 
             alert("Cadastro realizado com sucesso!");
@@ -87,7 +99,7 @@ export default function SignUpPage() {
                                 handleSubmit,
                                 setFieldValue
                             }) => (
-                                <Form >
+                                <Form onSubmit={handleSubmit}>
                                     <Form.Group className="mb-3">
                                         <Form.Label>Nome</Form.Label>
                                         <Form.Control
@@ -197,7 +209,7 @@ export default function SignUpPage() {
                                         </Form.Control.Feedback>
                                     </Form.Group>
 
-                                    <Button onClick={() => handleRegister(values)} variant="primary" type="submit">
+                                    <Button onClick={() => handleRegister(values)} type="submit" variant="primary">
                                         Cadastrar
                                     </Button>
 
