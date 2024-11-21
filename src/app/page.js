@@ -2,60 +2,32 @@
 import { useState, useEffect } from 'react';
 import { 
   Container, 
-  Navbar, 
   Card, 
   Row, 
   Col 
 } from 'react-bootstrap';
 import Nav from '@/components/Nav';
 import { v4 as uuidv4 } from 'uuid';
+import produtosData from './produtos.json';
+import categoriasData from './categorias.json';
 
 export default function HomePage() {
   const [categoryList, setCategoryList] = useState([]);
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
-    const storedCategories = JSON.parse(localStorage.getItem('categorias'));
-    if (storedCategories && storedCategories.length > 0) {
-      // Se já existem categorias no localStorage, use-os
-      setCategoryList(storedCategories);
-    } else {
-      // Caso contrário, faça a chamada à API
-      fetch('https://fakestoreapi.com/products/categories')
-        .then(res => res.json())
-        .then(data => {
-          // Adiciona um UUID a cada categoria
-          const categoriesWithId = data.map(category => ({
-            id: uuidv4(), // Gera um UUID para cada categoria
-            name: category // Preserva o nome da categoria
-          }));
-          setCategoryList(categoriesWithId);
-          localStorage.setItem('categorias', JSON.stringify(categoriesWithId));
-        });
-    }
-    const storedProducts = JSON.parse(localStorage.getItem('produtos'));
-    if (storedProducts && storedProducts.length > 0) {
-      // Se já existem produtos no localStorage, use-os
-      setProductList(storedProducts);
-    } else {
-      // Caso contrário, faça a chamada à API
-      fetch('https://fakestoreapi.com/products')
-        .then(res => res.json())
-        .then(data => {
-          const productsWithId = data.map(product => ({
-            ...product,
-            id: uuidv4()
-          }));
-          setProductList(productsWithId);
-          localStorage.setItem('produtos', JSON.stringify(productsWithId));
-        });
-    }
+    // Carregar categorias do JSON em vez da API
+    setCategoryList(categoriasData); // Usando os dados do JSON
+    localStorage.setItem('categorias', JSON.stringify(categoriasData)); // Armazenando no localStorage
+
+    // Carregar produtos do JSON
+    setProductList(produtosData); // Usando os dados do JSON
+    localStorage.setItem('produtos', JSON.stringify(produtosData)); // Armazenando no localStorage
   }, []);
 
   return (
     <>
       <Nav />
-
       <Container>
         <Row xs={1} md={3} lg={4} className="g-4">
           {productList.map(product => (

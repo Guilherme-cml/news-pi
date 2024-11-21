@@ -1,0 +1,42 @@
+[
+    {
+        "id": "f5868df9-a4ba-4acc-b66d-bd3e5a5c82ff",
+        "name": "jewelery"
+    },
+    {
+        "id": "78a985d8-ebf2-4cfa-9a67-c43e4848e1b7",
+        "name": "electronics"
+    },
+    {
+        "id": "d4901fb0-3775-4ec1-8ab5-fab3b7ef47cc",
+        "name": "furniture"
+    },
+    {
+        "id": "faa0af92-130f-472f-a7e5-d2789e3c47ed",
+        "name": "sports"
+    },
+    {
+        "id": "8e65c84f-dba6-4ae0-90dc-6de8b058d793",
+        "name": "men's clothing"
+    },
+    {
+        "id": "6c567ee0-3fae-4b96-b533-a13d015aa635",
+        "name": "women's clothing"
+    },
+    {
+        "id": "609f7b5c-0f3f-49cf-bac8-8b256662ae60",
+        "name": "home decor"
+    },
+    {
+        "id": "3e7f896f-6ace-4e15-9347-e683dca53a6f",
+        "name": "fitness"
+    },
+    {
+        "id": "50f8d874-620c-4fd1-afb2-48d0a4912626",
+        "name": "toys"
+    },
+    {
+        "id": "b4b30683-8fc6-462b-818a-767ec9b1a7e5",
+        "name": "kitchen"
+    }
+]
