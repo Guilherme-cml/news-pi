@@ -1,36 +1,72 @@
-'use client';
+'use client'
 
+import Nav from "@/components/Nav"
+import Link from "next/link"
 import { useEffect, useState } from "react";
-import Pagina from "@/app/components/Pagina";
-import { Button } from "react-bootstrap";
-import Link from "next/link";
+import { Button, Container, Table } from "react-bootstrap"
+import { FaPlusCircle } from "react-icons/fa";
+import { FaRegEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
-export default function ClientesPage() {
-    const [clientes, setClientes] = useState([]);
+export default function Page() {
+
+    const [clientes, setClientes] = useState([])
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem('clientes')) || [];
-        setClientes(data);
-    }, []);
+        setClientes(JSON.parse(localStorage.getItem('clientes')) || [])
+    }, [])
 
-    const excluirCliente = (id) => {
-        const novosClientes = clientes.filter(cliente => cliente.id !== id);
-        localStorage.setItem('clientes', JSON.stringify(novosClientes));
-        setClientes(novosClientes);
-    };
+    function excluir(id) {
+        if (confirm('Deseja realmente excluir o registro?')) {
+            const dados = clientes.filter(item => item.id != id)
+            localStorage.setItem('clientes', JSON.stringify(dados))
+            setClientes(dados)
+        }
+    }
 
     return (
-        <Pagina titulo="Clientes">
-            <Link href="/clientes/form" className="btn btn-primary mb-3">Novo Cliente</Link>
-            <ul>
-                {clientes.map(cliente => (
-                    <li key={cliente.id}>
-                        {cliente.nome}
-                        <Link href={`/clientes/form/${cliente.id}`}> Editar</Link>
-                        <Button onClick={() => excluirCliente(cliente.id)}>Excluir</Button>
-                    </li>
-                ))}
-            </ul>
-        </Pagina>
-    );
-} 
+        <>
+            <Nav />
+            <Container>
+            <Link
+                href="/clientes/form"
+                className="btn btn-primary mb-3"
+            >
+                <FaPlusCircle /> Novo
+            </Link>
+
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Data de Nascimento</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {clientes.map((item, i) => (
+                        <tr key={item.id}>
+                            <td>{item.nome}</td>
+                            <td>{item.email}</td>
+                            <td>{item.telefone}</td>
+                            <td>{item.data_nascimento}</td>
+                            <td>
+                                   
+                                    <Link href={`/clientes/form/${item.id}`} className="btn btn-primary me-2">
+                                        Editar
+                                    </Link>
+                                    <Button className=" btn btn-danger" onClick={() => excluir(item.id)}>
+                                        Excluir
+                                    </Button>
+                                </td>
+                           
+                        </tr>
+                    ))}
+                </tbody>
+                </Table>
+            </Container>
+        </>
+    )
+}

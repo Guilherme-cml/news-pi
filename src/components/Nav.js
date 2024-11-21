@@ -60,8 +60,9 @@ export default function Page() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link className="me-3" href="/produtos">Produtos</Nav.Link>
+                        <Nav.Link className="" href="/produtos">Produtos</Nav.Link>
                         <Nav.Link href="/categorias">Categorias</Nav.Link>
+                        <Nav.Link href="/clientes">Clientes</Nav.Link>
 
                     </Nav>
 
