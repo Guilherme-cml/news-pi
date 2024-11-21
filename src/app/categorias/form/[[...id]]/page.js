@@ -10,13 +10,13 @@ import { v4 } from "uuid";
 import Nav from "@/components/Nav";
 
 const CategoriaValidator = Yup.object().shape({
-    nome: Yup.string().required("Nome é obrigatório"),
+    name: Yup.string().required("Nome é obrigatório"),
 });
 
 export default function CategoriaForm({ params }) {
     const router = useRouter();
     const categorias = JSON.parse(localStorage.getItem('categorias')) || [];
-    const categoriaEncontrada = categorias.find(c => c.id === params.id);
+    const categoriaEncontrada = categorias.find(c => c.id === params.id?.[0]);
     const dados = categoriaEncontrada || { name: '' };
     
 
@@ -31,10 +31,11 @@ export default function CategoriaForm({ params }) {
 
     const salvarCategoria = (values) => {
         const categorias = JSON.parse(localStorage.getItem('categorias')) || [];
-        if (params.id) {
-            Object.assign(dados, values);
-            const index = categorias.findIndex(c => c.id === params.id);
-            categorias[index] = { ...categorias[index], ...values };
+        if (params.id?.[0]) {
+            const index = categorias.findIndex(c => c.id === params.id[0]);
+            if (index !== -1) {
+                categorias[index] = { ...categorias[index], ...values };
+            }
         } else {
             values.id = v4();
             categorias.push(values);
@@ -58,7 +59,7 @@ export default function CategoriaForm({ params }) {
                                 handleSubmit
                             }) => (
                                 <Form onSubmit={handleSubmit}>
-                                    <Form.Group className="mb-3" controlId="email">
+                                    <Form.Group className="mb-3" controlId="name">
                                         <Form.Label>Nome da Categoria</Form.Label>
                                         <Form.Control
                                             type="text"
@@ -71,7 +72,7 @@ export default function CategoriaForm({ params }) {
                             
                                     </Form.Group>
 
-                                    <Button onClick={() => salvarCategoria(values)} variant="primary" type="submit">
+                                    <Button variant="primary" type="submit">
                                         Salvar
                                     </Button>
                                 </Form>
