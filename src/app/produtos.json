@@ -172,7 +172,7 @@
         "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
         "price": 56.99,
         "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
-        "category": "women's clothing",
+        "category": "men's clothing",
         "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
         "rating": {
             "rate": 2.6,
@@ -184,7 +184,7 @@
         "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
         "price": 29.95,
         "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
-        "category": "women's clothing",
+        "category": "men's clothing",
         "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
         "rating": {
             "rate": 2.9,
@@ -196,7 +196,7 @@
         "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
         "price": 39.99,
         "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
-        "category": "women's clothing",
+        "category": "men's clothing",
         "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
         "rating": {
             "rate": 3.8,
@@ -232,7 +232,7 @@
         "title": "DANVOUY Womens T Shirt Casual Cotton Short",
         "price": 12.99,
         "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-        "category": "women's clothing",
+        "category": "jewelery",
         "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
         "rating": {
             "rate": 3.6,
@@ -244,7 +244,7 @@
         "title": "Wireless Earbuds",
         "price": 115.44,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "sports",
+        "category": "electronics",
         "image": "https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/beats-fit-pro/pdp/product-carousel/black/alt/black-01.jpg",
         "rating": {
             "rate": 3.4,
@@ -256,7 +256,7 @@
         "title": "Yoga Mat",
         "price": 425.31,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "women's clothing",
+        "category": "sports",
         "image": "https://images.tcdn.com.br/img/img_prod/754222/tapete_yoga_mat_pilates_exercicios_tpe_6mm_com_bolsa_615_variacao_699_1_fbf3059a7bc9b99b75e4691c23ce620d.jpg",
         "rating": {
             "rate": 3.3,
@@ -268,10 +268,10 @@
         "title": "Gaming Keyboard",
         "price": 223.65,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "fitness",
+        "category": "electronics",
         "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/22550154-9d3f-400b-b7e5-d101dca9537a.jpg",
         "rating": {
-            "rate": 5.0,
+            "rate": 5,
             "count": 198
         }
     },
@@ -280,7 +280,7 @@
         "title": "Smart Light Bulb",
         "price": 470.91,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "sports",
+        "category": "home decor",
         "image": "https://dengarden.com/.image/t_share/MTc0MzU1NTE3MDA5ODMxNTU4/wixann-9w-smart-led-light-bulb-review-cheap-color-bulb-for-all.jpg",
         "rating": {
             "rate": 3.7,
@@ -292,7 +292,7 @@
         "title": "Electric Kettle",
         "price": 302.59,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "toys",
+        "category": "kitchen",
         "image": "https://m.media-amazon.com/images/I/61bDYV59K1L.jpg",
         "rating": {
             "rate": 4.3,
@@ -304,10 +304,10 @@
         "title": "Men's Denim Jacket",
         "price": 70.71,
         "description": "High-quality and durable product for daily use.",
-        "category": "home decor",
+        "category": "men's clothing",
         "image": "https://thursdayboots.com/cdn/shop/products/1024x1024-Mens-Jackets-Denim-Trucker-WashedIndigo-010423-1_1024x1024.jpg?v=1673282143",
         "rating": {
-            "rate": 4.0,
+            "rate": 4,
             "count": 389
         }
     },
@@ -316,7 +316,7 @@
         "title": "Smart Light Bulb",
         "price": 103.94,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "women's clothing",
+        "category": "home decor",
         "image": "https://d1sfzvg6s5tf2e.cloudfront.net/Custom/Content/Products/49/55/4955_lampada-mi-led-smart-bulb-essent-prata_z1_638070588342202753.jpg",
         "rating": {
             "rate": 4.2,
@@ -328,7 +328,7 @@
         "title": "LED Desk Lamp",
         "price": 438.11,
         "description": "High-quality and durable product for daily use.",
-        "category": "toys",
+        "category": "home decor",
         "image": "https://www.auraglow.co.uk/pub/media/catalog/product/cache/c97319a176f100ff38168db5c7f45f43/f/o/folding_desk_lamp002.jpg",
         "rating": {
             "rate": 4.5,
@@ -340,7 +340,7 @@
         "title": "Women's Handbag",
         "price": 466.26,
         "description": "High-quality and durable product for daily use.",
-        "category": "kitchen",
+        "category": "women's clothing",
         "image": "https://sinocultural.com/cdn/shop/files/Embroidery_Leather_Magnolia_Women_s_Crossbody_Tote_Bag_-_SinoCultural-p120335-5.jpg?v=1724042381&width=800",
         "rating": {
             "rate": 4.1,
@@ -352,7 +352,7 @@
         "title": "Gaming Keyboard",
         "price": 225.11,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "home decor",
+        "category": "electronics",
         "image": "https://rukminim2.flixcart.com/image/850/1000/knan98w0/keyboard/gaming-keyboard/i/n/7/sanctuarybloodbat-one-handed-gaming-keyboard-gaming-keypad-rgb-original-imag2ydjepfzvhpg.jpeg?q=20&crop=false",
         "rating": {
             "rate": 3.6,
@@ -364,7 +364,7 @@
         "title": "Yoga Mat",
         "price": 257.96,
         "description": "High-quality and durable product for daily use.",
-        "category": "toys",
+        "category": "sports",
         "image": "https://www.marthastewart.com/thmb/TJyyssNA1ipeIXbp8DVDTzrXNZM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-clean-yoga-mat-getty-0623-1fda4b0532ea4f9787d5f248bbedaf8d.jpg",
         "rating": {
             "rate": 4.4,
@@ -376,7 +376,7 @@
         "title": "Wireless Earbuds",
         "price": 213.6,
         "description": "High-quality and durable product for daily use.",
-        "category": "furniture",
+        "category": "electronics",
         "image": "https://bigspell.com.br/cdn/shop/files/Fone.png?v=1682556605",
         "rating": {
             "rate": 4.2,
@@ -388,7 +388,7 @@
         "title": "Wireless Earbuds",
         "price": 335.67,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "men's clothing",
+        "category": "electronics",
         "image": "https://m.media-amazon.com/images/I/61zW8yc4hTL.jpg",
         "rating": {
             "rate": 4.5,
@@ -398,12 +398,12 @@
     {
         "id": "1a25eeb2-0153-4dca-85cb-a24d4dd5467c",
         "title": "Women's Handbag",
-        "price": 351.0,
+        "price": 351,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "electronics",
+        "category": "women's clothing",
         "image": "https://m.media-amazon.com/images/I/61RSyB+kbzL._AC_SL1200_.jpg",
         "rating": {
-            "rate": 4.0,
+            "rate": 4,
             "count": 294
         }
     },
@@ -412,7 +412,7 @@
         "title": "Gaming Keyboard",
         "price": 48.49,
         "description": "High-quality and durable product for daily use.",
-        "category": "fitness",
+        "category": "electronics",
         "image": "https://i.ebayimg.com/00/s/MTQwMlgxNTAw/z/ZOAAAOSwFR1hNvqU/$_57.JPG?set_id=8800005007",
         "rating": {
             "rate": 3.3,
@@ -448,7 +448,7 @@
         "title": "Foam Roller",
         "price": 349.23,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "electronics",
+        "category": "fitness",
         "image": "https://cdn.awsli.com.br/2500x2500/1109/1109223/produto/49180102/rolo-de-massagem-lorben-gt894-6-tnz93kt4mt.jpg",
         "rating": {
             "rate": 4.1,
@@ -460,7 +460,7 @@
         "title": "LED Desk Lamp",
         "price": 489.36,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "electronics",
+        "category": "home decor",
         "image": "https://m.media-amazon.com/images/I/71uxR31Qn0L.jpg",
         "rating": {
             "rate": 3.3,
@@ -472,7 +472,7 @@
         "title": "Smart Light Bulb",
         "price": 373.1,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "sports",
+        "category": "home decor",
         "image": "https://i5.walmartimages.com/seo/4-Pack-Smart-Light-Bulb-Wifi-Bulb-Color-Changing-LED-Bluetooth-Bulbs-APP-Remote-Controlled-Home-Lamp-Compatible-Alexa-Google-Assistant_1cba82fc-0e92-4d71-9b8a-38b182274c72_1.52bd96b1839a4c777e202ad19fe2492e.jpeg",
         "rating": {
             "rate": 3.9,
@@ -484,10 +484,10 @@
         "title": "Smart Light Bulb",
         "price": 429.66,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "furniture",
+        "category": "home decor",
         "image": "https://img-va.myshopline.com/image/store/1724234573336/HSLW01C1-1-7e31b098-7209-4958-9f69-5323e34e5e9d.jpg?w=1600&h=2000",
         "rating": {
-            "rate": 5.0,
+            "rate": 5,
             "count": 356
         }
     },
@@ -496,7 +496,7 @@
         "title": "Foam Roller",
         "price": 259.21,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "home decor",
+        "category": "fitness",
         "image": "https://www.crucialfitness.co.uk/pub/media/catalog/product/8/1/81tt6ype--l._sl1500_-1.jpg",
         "rating": {
             "rate": 3.2,
@@ -508,7 +508,7 @@
         "title": "Electric Kettle",
         "price": 316.35,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "home decor",
+        "category": "kitchen",
         "image": "https://www.ariete.net/media/images/product/main/ariete-2854-bollitore-elettrico-0e7e2602776dfa6a1511207d5374128b.jpg",
         "rating": {
             "rate": 4.6,
@@ -520,7 +520,7 @@
         "title": "Men's Denim Jacket",
         "price": 91.57,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "toys",
+        "category": "men's clothing",
         "image": "https://m.media-amazon.com/images/I/71aSn8EbZxL._AC_UY1000_.jpg",
         "rating": {
             "rate": 3.9,
@@ -532,7 +532,7 @@
         "title": "Yoga Mat",
         "price": 425.58,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "toys",
+        "category": "sports",
         "image": "https://cdn.bodynova.de/out/pictures/master/product/1/888x_yoga_meditation_pilates_flow_set_sammelbild.jpg",
         "rating": {
             "rate": 4.4,
@@ -544,7 +544,7 @@
         "title": "Gaming Keyboard",
         "price": 105.09,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "women's clothing",
+        "category": "electronics",
         "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/f7ad293b-83a1-46f9-8edd-f0c93fbe02e8.jpg",
         "rating": {
             "rate": 4.9,
@@ -556,7 +556,7 @@
         "title": "Gaming Keyboard",
         "price": 260.92,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "men's clothing",
+        "category": "electronics",
         "image": "https://kreo-tech.com/cdn/shop/files/1_copy_8.png?v=1728591355&width=533",
         "rating": {
             "rate": 4.9,
@@ -568,7 +568,7 @@
         "title": "Wireless Earbuds",
         "price": 306.27,
         "description": "High-quality and durable product for daily use.",
-        "category": "men's clothing",
+        "category": "electronics",
         "image": "https://m.media-amazon.com/images/I/61hWwN0cOhL.jpg",
         "rating": {
             "rate": 3.5,
@@ -580,10 +580,10 @@
         "title": "Wireless Earbuds",
         "price": 376.18,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "home decor",
+        "category": "electronics",
         "image": "https://cdn.awsli.com.br/2500x2500/1861/1861669/produto/95840622ea721d902e.jpg",
         "rating": {
-            "rate": 3.0,
+            "rate": 3,
             "count": 466
         }
     },
@@ -592,7 +592,7 @@
         "title": "Electric Kettle",
         "price": 391.82,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "sports",
+        "category": "kitchen",
         "image": "https://wiproappliances.com/cdn/shop/articles/Exploring_The_Latest_Tea_Brewing_Techniques_with_Electric_Kettles.jpg?v=1720516481",
         "rating": {
             "rate": 4.4,
@@ -604,7 +604,7 @@
         "title": "Smart Light Bulb",
         "price": 360.06,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "men's clothing",
+        "category": "home decor",
         "image": "https://m.media-amazon.com/images/I/61DD9OxpX8L._AC_UF894,1000_QL80_.jpg",
         "rating": {
             "rate": 4.4,
@@ -614,9 +614,9 @@
     {
         "id": "259cec65-caa0-4af4-9f8e-5ada17524aa5",
         "title": "Men's Denim Jacket",
-        "price": 339.0,
+        "price": 339,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "sports",
+        "category": "men's clothing",
         "image": "https://m.media-amazon.com/images/I/91mkkg7dORL._AC_UY1000_.jpg",
         "rating": {
             "rate": 4.3,
@@ -628,7 +628,7 @@
         "title": "Men's Denim Jacket",
         "price": 328.11,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "fitness",
+        "category": "men's clothing",
         "image": "https://cdn.walletmonitor.com/img/9dcf426bf773f53c1f8133994b515ec2.jpg",
         "rating": {
             "rate": 3.2,
@@ -640,7 +640,7 @@
         "title": "Smart Light Bulb",
         "price": 333.82,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "toys",
+        "category": "home decor",
         "image": "https://tekled.co.uk/cdn/shop/products/smart-a60-e27-edison-screw-9w-rgb-white-led-gls-bulb-main.jpg?v=1633985813",
         "rating": {
             "rate": 3.2,
@@ -652,7 +652,7 @@
         "title": "Gaming Keyboard",
         "price": 467.02,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "toys",
+        "category": "electronics",
         "image": "https://altcustoms.com/cdn/shop/files/GamingKeyboard_53218918-d2bd-41ec-ab98-e3f8f106d3d8.jpg?v=1615085984",
         "rating": {
             "rate": 4.8,
@@ -664,7 +664,7 @@
         "title": "Women's Handbag",
         "price": 22.88,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "home decor",
+        "category": "women's clothing",
         "image": "https://image.made-in-china.com/202f0j00YrMkuVqJCUgw/2024-Bolsos-PARA-Mujeres-Fashion-Bags-Women-Handbags-Ladies-Hand-Bag.webp",
         "rating": {
             "rate": 4.6,
@@ -676,7 +676,7 @@
         "title": "Yoga Mat",
         "price": 173.57,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "women's clothing",
+        "category": "sports",
         "image": "https://assetscdn1.paytm.com/images/catalog/product/S/SP/SPOSTRAUSS-ECO-KHEL1932689A38083C/1612004731189_28.jpg",
         "rating": {
             "rate": 3.9,
@@ -688,7 +688,7 @@
         "title": "Adjustable Office Chair",
         "price": 93.38,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "fitness",
+        "category": "furniture",
         "image": "https://m.media-amazon.com/images/I/51u5ca2ltjL._AC_UF894,1000_QL80_.jpg",
         "rating": {
             "rate": 4.2,
@@ -700,10 +700,10 @@
         "title": "Adjustable Office Chair",
         "price": 122.98,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "electronics",
+        "category": "furniture",
         "image": "https://m.media-amazon.com/images/I/51pIsBQhHML._AC_UF894,1000_QL80_.jpg",
         "rating": {
-            "rate": 4.0,
+            "rate": 4,
             "count": 32
         }
     },
@@ -712,7 +712,7 @@
         "title": "Electric Kettle",
         "price": 455.21,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "sports",
+        "category": "kitchen",
         "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Prestige_Electric_Kettle_2_Liter_Silver_-Prestige-a909e-298488.jpg",
         "rating": {
             "rate": 4.3,
@@ -724,7 +724,7 @@
         "title": "Women's Handbag",
         "price": 174.76,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "home decor",
+        "category": "women's clothing",
         "image": "https://www.accessorize.com/dw/image/v2/BDLV_PRD/on/demandware.static/-/Sites-accessorize-master-catalog/default/dwc36a1f3b/images/large/01_40000740055_1.jpg?sw=594&sh=761&sm=cut",
         "rating": {
             "rate": 3.8,
@@ -748,7 +748,7 @@
         "title": "LED Desk Lamp",
         "price": 442.77,
         "description": "High-quality and durable product for daily use.",
-        "category": "women's clothing",
+        "category": "home decor",
         "image": "https://lw-cdn.com/images/A02BB885ADE9/k_75b352e919d58465b38d3165acc4c475;w_1600;h_1600;q_100/3502573.jpg",
         "rating": {
             "rate": 3.4,
@@ -760,7 +760,7 @@
         "title": "Adjustable Office Chair",
         "price": 156.92,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "electronics",
+        "category": "furniture",
         "image": "https://drogo.in/cdn/shop/files/91czgddDEuL.jpg?v=1722938805&width=2000",
         "rating": {
             "rate": 3.2,
@@ -772,7 +772,7 @@
         "title": "LED Desk Lamp",
         "price": 240.85,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "furniture",
+        "category": "home decor",
         "image": "https://m.media-amazon.com/images/I/41Nq0v-oxfL._AC_.jpg",
         "rating": {
             "rate": 3.7,
@@ -784,7 +784,7 @@
         "title": "Smart Light Bulb",
         "price": 60.73,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "sports",
+        "category": "home decor",
         "image": "https://m.media-amazon.com/images/I/51-zQV+C7ES._AC_UF1000,1000_QL80_.jpg",
         "rating": {
             "rate": 4.2,
@@ -796,7 +796,7 @@
         "title": "Foam Roller",
         "price": 188.79,
         "description": "High-quality and durable product for daily use.",
-        "category": "women's clothing",
+        "category": "fitness",
         "image": "https://www.achievefitness.co.nz/media/catalog/product/cache/65c1de99e9ec6fa68ea31c798ef9aee9/y/k/yk82030_york_hollow_foam_roller.jpg",
         "rating": {
             "rate": 4.7,
@@ -808,10 +808,10 @@
         "title": "Adjustable Office Chair",
         "price": 87.74,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "sports",
+        "category": "furniture",
         "image": "https://technimobili.com/cdn/shop/products/rta-8030-brn-1.jpg?v=1598978446",
         "rating": {
-            "rate": 3.0,
+            "rate": 3,
             "count": 135
         }
     },
@@ -820,7 +820,7 @@
         "title": "Men's Denim Jacket",
         "price": 319.87,
         "description": "High-quality and durable product for daily use.",
-        "category": "electronics",
+        "category": "men's clothing",
         "image": "https://m.media-amazon.com/images/I/615b2lLoDqL._AC_SX425_.jpg",
         "rating": {
             "rate": 3.5,
@@ -832,7 +832,7 @@
         "title": "Yoga Mat",
         "price": 185.29,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "furniture",
+        "category": "sports",
         "image": "https://m.media-amazon.com/images/I/31xZes0HNQL.jpg",
         "rating": {
             "rate": 3.9,
@@ -844,7 +844,7 @@
         "title": "Women's Handbag",
         "price": 95.09,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "furniture",
+        "category": "women's clothing",
         "image": "https://images.meesho.com/images/products/389748835/mcegb_512.webp",
         "rating": {
             "rate": 3.2,
@@ -856,7 +856,7 @@
         "title": "Men's Denim Jacket",
         "price": 393.84,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "toys",
+        "category": "men's clothing",
         "image": "https://s.alicdn.com/@sc04/kf/H1832fde76514481e91c16665c4f4168aH.jpg_720x720q50.jpg",
         "rating": {
             "rate": 3.2,
@@ -868,7 +868,7 @@
         "title": "Wireless Earbuds",
         "price": 488.87,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "fitness",
+        "category": "electronics",
         "image": "https://c1.neweggimages.com/productimage/nb640/BRESD2309280H59W37F.jpg",
         "rating": {
             "rate": 4.1,
@@ -880,7 +880,7 @@
         "title": "Gaming Keyboard",
         "price": 438.69,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "toys",
+        "category": "electronics",
         "image": "https://www.wasdkeyboards.com/media/wysiwyg/hp/gallery/gallery_17.jpg",
         "rating": {
             "rate": 4.8,
@@ -892,7 +892,7 @@
         "title": "Adjustable Office Chair",
         "price": 202.55,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "fitness",
+        "category": "furniture",
         "image": "https://images.thdstatic.com/productImages/9725fc55-d2de-447f-a9af-54fe9780bcbe/svn/black-vevor-executive-chairs-lbycgkpgkdjya4gy1v0-0726-64_1000.jpg",
         "rating": {
             "rate": 3.6,
@@ -904,7 +904,7 @@
         "title": "LED Desk Lamp",
         "price": 65.93,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "sports",
+        "category": "home decor",
         "image": "https://storely.pk/cdn/shop/files/LED_Desk_Lamp_Post_3.jpg?v=1722323197&width=1946",
         "rating": {
             "rate": 3.8,
@@ -916,7 +916,7 @@
         "title": "Wireless Earbuds",
         "price": 88.29,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "furniture",
+        "category": "electronics",
         "image": "https://m.media-amazon.com/images/I/51fkoZe-K6L.jpg",
         "rating": {
             "rate": 4.7,
@@ -928,7 +928,7 @@
         "title": "LED Desk Lamp",
         "price": 284.87,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "sports",
+        "category": "home decor",
         "image": "https://whiteteak.com/media/catalog/product/t/l/tl24-10001_1.jpg",
         "rating": {
             "rate": 4.4,
@@ -952,7 +952,7 @@
         "title": "Wireless Earbuds",
         "price": 264.19,
         "description": "High-quality and durable product for daily use.",
-        "category": "home decor",
+        "category": "electronics",
         "image": "https://images-cdn.ubuy.co.in/633aaa268abff95b0c6c778c-soundpeats-sonic-wireless-earbuds-with.jpg",
         "rating": {
             "rate": 4.8,
@@ -976,7 +976,7 @@
         "title": "LED Desk Lamp",
         "price": 121.62,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "men's clothing",
+        "category": "home decor",
         "image": "https://cdn.lumie.com/files/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTYwMzgsInB1ciI6ImJsb2JfaWQifX0=--c2f132497d302f1fbc8e80955071d8d76e6e7e40/lumie-task-charcoal-blue-06-1200x1200.webp",
         "rating": {
             "rate": 3.5,
@@ -988,7 +988,7 @@
         "title": "Foam Roller",
         "price": 337.17,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "electronics",
+        "category": "fitness",
         "image": "https://cdn.webshopapp.com/shops/281654/files/463273064/yoga-grid-foam-roller.jpg",
         "rating": {
             "rate": 3.1,
@@ -1000,10 +1000,10 @@
         "title": "Smart Light Bulb",
         "price": 159.3,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "toys",
+        "category": "home decor",
         "image": "https://cdn.shopify.com/s/files/1/0469/4635/3319/products/smart-a60-b22-bayonet-cap-9w-rgb-white-led-gls-bulb-dimensions_14f75266-b397-4793-8630-ff2118c028fe-252292_500x500.jpg?v=1680525712",
         "rating": {
-            "rate": 3.0,
+            "rate": 3,
             "count": 35
         }
     },
@@ -1012,7 +1012,7 @@
         "title": "Adjustable Office Chair",
         "price": 430.68,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "home decor",
+        "category": "furniture",
         "image": "https://qsales.qa/cdn/shop/files/WhatsAppImage2023-08-23at12.27.54.jpg?v=1692793005",
         "rating": {
             "rate": 3.7,
@@ -1024,10 +1024,10 @@
         "title": "Gaming Keyboard",
         "price": 322.28,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "men's clothing",
+        "category": "electronics",
         "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/954e4e74-9e46-4fd3-856a-086933015817.__CR0,0,800,600_PT0_SX600_V1___.png",
         "rating": {
-            "rate": 3.0,
+            "rate": 3,
             "count": 144
         }
     },
@@ -1036,7 +1036,7 @@
         "title": "Women's Handbag",
         "price": 13.88,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "fitness",
+        "category": "women's clothing",
         "image": "https://s.alicdn.com/@sc04/kf/Hdd7af5f29e62447192713a10c23957e7T.jpg_720x720q50.jpg",
         "rating": {
             "rate": 3.7,
@@ -1048,7 +1048,7 @@
         "title": "Men's Denim Jacket",
         "price": 412.27,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "women's clothing",
+        "category": "men's clothing",
         "image": "https://m.media-amazon.com/images/I/61PFh-22LZL._AC_SX425_.jpg",
         "rating": {
             "rate": 3.4,
@@ -1060,7 +1060,7 @@
         "title": "Yoga Mat",
         "price": 145.2,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "kitchen",
+        "category": "sports",
         "image": "https://img.lazcdn.com/g/p/d5ab3a38b18e198ea7c0118b049f188b.jpg_960x960q80.jpg_.webp",
         "rating": {
             "rate": 3.9,
@@ -1075,7 +1075,7 @@
         "category": "sports",
         "image": "https://5.imimg.com/data5/MO/GB/JQ/SELLER-3005976/nbr-20-mm-yogamat-500x500.jpg",
         "rating": {
-            "rate": 5.0,
+            "rate": 5,
             "count": 369
         }
     },
@@ -1084,10 +1084,10 @@
         "title": "Smart Light Bulb",
         "price": 241.7,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "kitchen",
+        "category": "home decor",
         "image": "https://i5.walmartimages.com/seo/GE-Cync-A19-Smart-LED-Light-Bulb-Color-Changing-Indoor-Decor-Lights-60-Watts-Medium-Base-1pk_39d54803-6b59-4a85-96c3-94c6c9b2ea75.ded432ca68c3b4b42c0f9a36d8b2c367.jpeg",
         "rating": {
-            "rate": 4.0,
+            "rate": 4,
             "count": 453
         }
     },
@@ -1096,7 +1096,7 @@
         "title": "Smart Light Bulb",
         "price": 96.57,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "electronics",
+        "category": "home decor",
         "image": "https://images.prismic.io/palmettoblog/4c45721a-559d-4c91-8af7-52c4d2712109_smart-lights-save-money.jpg?auto=compress,format&rect=150,0,900,600&w=1200&h=800",
         "rating": {
             "rate": 3.6,
@@ -1108,7 +1108,7 @@
         "title": "Foam Roller",
         "price": 38.4,
         "description": "High-quality and durable product for daily use.",
-        "category": "kitchen",
+        "category": "fitness",
         "image": "https://m.media-amazon.com/images/I/71rlElzascL._AC_UF1000,1000_QL80_.jpg",
         "rating": {
             "rate": 3.1,
@@ -1120,7 +1120,7 @@
         "title": "LED Desk Lamp",
         "price": 342.79,
         "description": "High-quality and durable product for daily use.",
-        "category": "electronics",
+        "category": "home decor",
         "image": "https://www.depuley.com/cdn/shop/products/depuley-dllt-swing-arm-desk-lamp-wood-adjustable-gooseneck-table-lamp-modern-architect-desk-light-reading-light-for-work-study-bedroom-home-office-college-dorm--541000.jpg?v=1677813112",
         "rating": {
             "rate": 4.8,
@@ -1132,7 +1132,7 @@
         "title": "Smart Light Bulb",
         "price": 11.21,
         "description": "High-quality and durable product for daily use.",
-        "category": "fitness",
+        "category": "home decor",
         "image": "https://xlyne.de/wp-content/uploads/2023/06/XCOAST_E27_LED_Leuchte_570467_1-3.jpg",
         "rating": {
             "rate": 3.8,
@@ -1144,7 +1144,7 @@
         "title": "Women's Handbag",
         "price": 95.48,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "kitchen",
+        "category": "women's clothing",
         "image": "https://i5.walmartimages.com/seo/Frontwalk-Ladies-Handbag-Multi-Pocket-Shoulder-Bag-Zipper-PU-Leather-Crossbody-Bags-Designer-Women-Pink_2afed50e-6538-4f0b-84b0-e29ffd3c84eb.827059e99203dbd026527fbd6ced0a5e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
         "rating": {
             "rate": 4.3,
@@ -1156,7 +1156,7 @@
         "title": "Yoga Mat",
         "price": 171.91,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "furniture",
+        "category": "sports",
         "image": "https://img.lazcdn.com/g/ff/kf/S51fd652b34054ccda4aec4fdf1461603Z.jpg_720x720q80.jpg",
         "rating": {
             "rate": 3.2,
@@ -1168,7 +1168,7 @@
         "title": "Wireless Earbuds",
         "price": 105.25,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "kitchen",
+        "category": "electronics",
         "image": "https://i0.wp.com/appleme.lk/wp-content/uploads/2022/11/02-117.jpg?fit=600%2C600&ssl=1",
         "rating": {
             "rate": 3.7,
@@ -1180,7 +1180,7 @@
         "title": "Women's Handbag",
         "price": 36.15,
         "description": "High-quality and durable product for daily use.",
-        "category": "kitchen",
+        "category": "women's clothing",
         "image": "https://images-na.ssl-images-amazon.com/images/I/71cltRjcp3L._SLDPMOBCAROUSELAUTOCROP288221_MCnd_AC_SR462,693_.jpg",
         "rating": {
             "rate": 4.3,
@@ -1192,7 +1192,7 @@
         "title": "Wireless Earbuds",
         "price": 74.82,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "men's clothing",
+        "category": "electronics",
         "image": "https://www.electronicsexpo.com/cdn/shop/files/JBLLiveBeam31.jpg?v=1719432678&width=533",
         "rating": {
             "rate": 4.2,
@@ -1204,7 +1204,7 @@
         "title": "Smart Light Bulb",
         "price": 287.75,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "fitness",
+        "category": "home decor",
         "image": "https://m.media-amazon.com/images/I/61YbZ-DYelL._AC_UF1000,1000_QL80_.jpg",
         "rating": {
             "rate": 3.7,
@@ -1216,7 +1216,7 @@
         "title": "Gaming Keyboard",
         "price": 169.5,
         "description": "High-quality and durable product for daily use.",
-        "category": "furniture",
+        "category": "electronics",
         "image": "https://ae01.alicdn.com/kf/S590ff5ee278044ebaf008a32ea6f8f06g/Wired-Wireless-Three-modes-Mechanical-Keyboard-RGB-ABS-two-color-Injection-61-Keys-Type-C-Port.jpg",
         "rating": {
             "rate": 3.3,
@@ -1228,7 +1228,7 @@
         "title": "Adjustable Office Chair",
         "price": 427.95,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "fitness",
+        "category": "furniture",
         "image": "https://www.lakdi.com/cdn/shop/files/Boss_Office_Chair_High-Back_Leather_Executive_Swivel_Adjustable_Swivel_Office_Desk_Chair_with_Armrests_Lumbar_Support_-_-3746894.jpg?v=1726930127",
         "rating": {
             "rate": 4.5,
@@ -1240,10 +1240,10 @@
         "title": "Smart Light Bulb",
         "price": 146.11,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "electronics",
+        "category": "home decor",
         "image": "https://www.switch-bot.com/cdn/shop/files/61UJCzIW1vL._AC_SL1500.jpg?v=1728958204",
         "rating": {
-            "rate": 5.0,
+            "rate": 5,
             "count": 83
         }
     },
@@ -1252,7 +1252,7 @@
         "title": "Adjustable Office Chair",
         "price": 109.1,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "kitchen",
+        "category": "furniture",
         "image": "https://m.media-amazon.com/images/I/51OVHZ6LIJL._AC_UF894,1000_QL80_.jpg",
         "rating": {
             "rate": 3.1,
@@ -1264,10 +1264,10 @@
         "title": "Smart Light Bulb",
         "price": 398.48,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "fitness",
+        "category": "home decor",
         "image": "https://i5.walmartimages.com/seo/Smart-Light-Bulbs-4-Pack-Treatlife-2-4GHz-Music-Sync-Color-Changing-Bulb-Works-Alexa-Google-Home-A19-E26-Dimmable-LED-Bulb-9W-800-Lumen-Party-Decorat_f1c26645-1f93-43d0-a011-fa61dbf6ba66.c2974421451879d181a289b56c3a1904.jpeg",
         "rating": {
-            "rate": 5.0,
+            "rate": 5,
             "count": 45
         }
     },
@@ -1276,7 +1276,7 @@
         "title": "Yoga Mat",
         "price": 274.9,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "women's clothing",
+        "category": "sports",
         "image": "https://i.ebayimg.com/images/g/zgsAAOSwQhZiLw0q/s-l400.jpg",
         "rating": {
             "rate": 3.8,
@@ -1288,7 +1288,7 @@
         "title": "Gaming Keyboard",
         "price": 84.99,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "home decor",
+        "category": "electronics",
         "image": "https://s.alicdn.com/@sc04/kf/H1e708b4aa3df4f16893ea03e93276a0cE.jpg_720x720q50.jpg",
         "rating": {
             "rate": 4.9,
@@ -1300,10 +1300,10 @@
         "title": "Gaming Keyboard",
         "price": 455.05,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "kitchen",
+        "category": "electronics",
         "image": "https://p1-ofp.static.pub/medias/C9837790-BCE8-45D5-A35F-5F440C241C62_800x600_1675492602379.jpg",
         "rating": {
-            "rate": 4.0,
+            "rate": 4,
             "count": 314
         }
     },
@@ -1312,10 +1312,10 @@
         "title": "Yoga Mat",
         "price": 494.5,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "men's clothing",
+        "category": "sports",
         "image": "https://www.ekomat.com.br/cdn/shop/files/3_96cfa0dc-8a1f-4dc9-8aed-198687a43a82_1200x.png?v=1695152746",
         "rating": {
-            "rate": 4.0,
+            "rate": 4,
             "count": 277
         }
     },
@@ -1324,7 +1324,7 @@
         "title": "Smart Light Bulb",
         "price": 238.83,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "sports",
+        "category": "home decor",
         "image": "https://byjasco.com/media/catalog/product/5/1/51337.ep.00_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=&width=",
         "rating": {
             "rate": 3.4,
@@ -1336,7 +1336,7 @@
         "title": "Electric Kettle",
         "price": 158.56,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "fitness",
+        "category": "kitchen",
         "image": "https://pinamart.com/wp-content/uploads/2021/04/scanfrost-electric-kettle.jpg",
         "rating": {
             "rate": 4.2,
@@ -1348,7 +1348,7 @@
         "title": "LED Desk Lamp",
         "price": 28.77,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "fitness",
+        "category": "home decor",
         "image": "https://img.drz.lazcdn.com/collect/my/p/1199648d625cf50f77ce8129f9d8e5e3.jpg_960x960q80.jpg_.webp",
         "rating": {
             "rate": 4.8,
@@ -1360,7 +1360,7 @@
         "title": "Adjustable Office Chair",
         "price": 203.86,
         "description": "High-quality and durable product for daily use.",
-        "category": "electronics",
+        "category": "furniture",
         "image": "https://fabfindsonline.ca/cdn/shop/products/s678712297676659568_p1256_i2_w2000.jpg?v=1692949974",
         "rating": {
             "rate": 4.3,
@@ -1372,7 +1372,7 @@
         "title": "Foam Roller",
         "price": 315.38,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "women's clothing",
+        "category": "fitness",
         "image": "https://pttimewithtim.com/wp-content/uploads/2023/02/Foam-Roller-Low-Back-Stretch.jpg",
         "rating": {
             "rate": 4.6,
@@ -1384,7 +1384,7 @@
         "title": "Women's Handbag",
         "price": 130.61,
         "description": "High-quality and durable product for daily use.",
-        "category": "men's clothing",
+        "category": "women's clothing",
         "image": "https://ae01.alicdn.com/kf/Sca8796e655c246e69a7260e9cb042613j.jpg_640x640.jpg_.webp",
         "rating": {
             "rate": 3.8,
@@ -1399,7 +1399,7 @@
         "category": "men's clothing",
         "image": "https://m.media-amazon.com/images/I/61YVjyyl3wL._AC_SX466_.jpg",
         "rating": {
-            "rate": 5.0,
+            "rate": 5,
             "count": 474
         }
     },
@@ -1408,7 +1408,7 @@
         "title": "Men's Denim Jacket",
         "price": 457.15,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "electronics",
+        "category": "men's clothing",
         "image": "https://m.media-amazon.com/images/I/7121rWvXFKL._AC_SX466_.jpg",
         "rating": {
             "rate": 3.8,
@@ -1420,7 +1420,7 @@
         "title": "LED Desk Lamp",
         "price": 429.83,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "furniture",
+        "category": "home decor",
         "image": "https://i.ytimg.com/vi/Lh8xysqWHqY/hq720.jpg?",
         "rating": {
             "rate": 4.3,
@@ -1432,7 +1432,7 @@
         "title": "Electric Kettle",
         "price": 336.28,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "toys",
+        "category": "kitchen",
         "image": "https://www.alfatah.com.pk/wp-content/uploads/2024/02/image-2-4.webp",
         "rating": {
             "rate": 4.7,
@@ -1444,7 +1444,7 @@
         "title": "Wireless Earbuds",
         "price": 299.77,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "fitness",
+        "category": "electronics",
         "image": "https://allmytech.pk/wp-content/uploads/2024/07/air4transparent.webp",
         "rating": {
             "rate": 3.7,
@@ -1456,7 +1456,7 @@
         "title": "Men's Denim Jacket",
         "price": 276.86,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "home decor",
+        "category": "men's clothing",
         "image": "https://images-cdn.ubuy.co.in/65b577d84bd4e13ad93de850-mens-regular-fit-crew-neck-bomber.jpg",
         "rating": {
             "rate": 4.3,
@@ -1468,7 +1468,7 @@
         "title": "Yoga Mat",
         "price": 307.18,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "toys",
+        "category": "sports",
         "image": "https://www.soul-destiny.co.uk/user/products/Pink_TPE.jpg",
         "rating": {
             "rate": 3.1,
@@ -1480,7 +1480,7 @@
         "title": "LED Desk Lamp",
         "price": 339.31,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "men's clothing",
+        "category": "home decor",
         "image": "https://media.karousell.com/media/photos/products/2024/8/31/xiaomi_mi_led_desk_lamp_1s_1725084622_17b6a361.jpg",
         "rating": {
             "rate": 3.7,
@@ -1492,7 +1492,7 @@
         "title": "Gaming Keyboard",
         "price": 380.16,
         "description": "High-quality and durable product for daily use.",
-        "category": "fitness",
+        "category": "electronics",
         "image": "https://i.ebayimg.com/images/g/GvUAAOSwKBdkGSNy/s-l1200.jpg",
         "rating": {
             "rate": 4.9,
@@ -1504,7 +1504,7 @@
         "title": "Smart Light Bulb",
         "price": 454.52,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "sports",
+        "category": "home decor",
         "image": "https://i5.walmartimages.com/seo/Philips-Smart-LED-60-Watt-A19-General-Purpose-Light-Bulb-Frosted-Color-Tunable-White-Dimmable-E26-Medium-Base-1-Pack_956192ba-882a-48f6-a993-13b0968a908d.0b7a731d68da9bb9c1d86cb8ab3a8440.jpeg",
         "rating": {
             "rate": 4.9,
@@ -1516,10 +1516,10 @@
         "title": "Men's Denim Jacket",
         "price": 367.55,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "women's clothing",
+        "category": "men's clothing",
         "image": "https://img4.dhresource.com/webp/m/0x0/f3/albu/jc/g/26/f256e3a0-1f2d-4007-a84c-111a8b3cdb33.jpg",
         "rating": {
-            "rate": 4.0,
+            "rate": 4,
             "count": 384
         }
     },
@@ -1528,7 +1528,7 @@
         "title": "Adjustable Office Chair",
         "price": 479.04,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "men's clothing",
+        "category": "furniture",
         "image": "https://valueofficefurniture.com.au/wp-content/uploads/2020/05/Initial-Basics-Medium-Back-Task-Chair-Blue-Fabric-with-Arm-Rests.jpg",
         "rating": {
             "rate": 4.9,
@@ -1552,7 +1552,7 @@
         "title": "Women's Handbag",
         "price": 289.75,
         "description": "High-quality and durable product for daily use.",
-        "category": "fitness",
+        "category": "women's clothing",
         "image": "https://i5.walmartimages.com/seo/Sehao-Spring-And-Summer-Trendy-Bags-Ladies-Handbags-Shoulder-Messenger-Bags-Large-Capacity-Handbag-Womens-Bag-Gift-on-Clearance_53178e9e-619c-4eef-acc5-f7f9625b0713.99453c97f29a64f75827da876f796482.jpeg",
         "rating": {
             "rate": 4.1,
@@ -1564,7 +1564,7 @@
         "title": "LED Desk Lamp",
         "price": 346.47,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "kitchen",
+        "category": "home decor",
         "image": "https://cdn.lumie.com/files/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTYwNjEsInB1ciI6ImJsb2JfaWQifX0=--9bdbe00ca321c5985bfce76029797362ae33fb17/lumie-task-white-mist-07-1200x1200.webp",
         "rating": {
             "rate": 3.9,
@@ -1576,7 +1576,7 @@
         "title": "Men's Denim Jacket",
         "price": 352.55,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "toys",
+        "category": "men's clothing",
         "image": "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/06/5185861/2.jpg?2061",
         "rating": {
             "rate": 4.9,
@@ -1588,7 +1588,7 @@
         "title": "Foam Roller",
         "price": 86.79,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "toys",
+        "category": "fitness",
         "image": "https://cdn.awsli.com.br/2519/2519665/produto/183384754/9a1bf07c42.jpg",
         "rating": {
             "rate": 3.1,
@@ -1600,10 +1600,10 @@
         "title": "Smart Light Bulb",
         "price": 316.77,
         "description": "High-quality and durable product for daily use.",
-        "category": "furniture",
+        "category": "home decor",
         "image": "https://http2.mlstatic.com/D_919170-MLU75210706616_032024-C.jpg",
         "rating": {
-            "rate": 5.0,
+            "rate": 5,
             "count": 351
         }
     },
@@ -1612,7 +1612,7 @@
         "title": "Men's Denim Jacket",
         "price": 371.9,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "electronics",
+        "category": "men's clothing",
         "image": "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/72/5902362/1.jpg?0307",
         "rating": {
             "rate": 4.5,
@@ -1624,7 +1624,7 @@
         "title": "Men's Denim Jacket",
         "price": 249.65,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "furniture",
+        "category": "men's clothing",
         "image": "https://cdn.notonthehighstreet.com/fs/a9/01/633e-8002-4d8a-b3cb-97afdf9c5c5e/original_baby-boy-personalised-hand-painted-denim-jacket.jpg",
         "rating": {
             "rate": 4.7,
@@ -1648,7 +1648,7 @@
         "title": "Gaming Keyboard",
         "price": 196.97,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "furniture",
+        "category": "electronics",
         "image": "https://rkgamingstore.com/cdn/shop/files/RKROYALKLUDGER75WirelessMechanicalKeyboard_5.jpg?v=1725958001",
         "rating": {
             "rate": 4.8,
@@ -1660,7 +1660,7 @@
         "title": "Smart Light Bulb",
         "price": 33.53,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "kitchen",
+        "category": "home decor",
         "image": "https://mobileimages.lowes.com/productimages/58caee36-52f2-46d2-a9bb-1ea93a241d43/67964192.jpeg?size=pdhz",
         "rating": {
             "rate": 4.8,
@@ -1672,7 +1672,7 @@
         "title": "Electric Kettle",
         "price": 242.1,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "men's clothing",
+        "category": "kitchen",
         "image": "https://assets.wsimgs.com/wsimgs/ab/images/dp/wcm/202436/0156/img2o.jpg",
         "rating": {
             "rate": 4.4,
@@ -1684,7 +1684,7 @@
         "title": "Yoga Mat",
         "price": 221.34,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "fitness",
+        "category": "sports",
         "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/sport-mat/p/i/l/6mm-premium-eva-with-tpe-blend-anti-slip-tearless-yoga-mat-with-original-imagshwrvbkpfzsm.jpeg?q=90&crop=false",
         "rating": {
             "rate": 4.4,
@@ -1708,7 +1708,7 @@
         "title": "Smart Light Bulb",
         "price": 497.76,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "men's clothing",
+        "category": "home decor",
         "image": "https://www.feit.com/cdn/shop/files/G3060-RGBW-FIL-AG-2024-09-09-main.jpg?v=1725866107&width=1500",
         "rating": {
             "rate": 3.9,
@@ -1720,7 +1720,7 @@
         "title": "Women's Handbag",
         "price": 453.72,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "sports",
+        "category": "women's clothing",
         "image": "https://ae01.alicdn.com/kf/S8d84aab5c7a74addb53bee55e82139f3K/Handbags-For-Women-On-Sale-Clearance-Handbags-Shoulder-Messenger-Bags-Large-Capacity-Handbag-Female-Bag.jpg",
         "rating": {
             "rate": 3.9,
@@ -1732,7 +1732,7 @@
         "title": "Women's Handbag",
         "price": 54.48,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "home decor",
+        "category": "women's clothing",
         "image": "https://gh.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/01/3026542/1.jpg?9950",
         "rating": {
             "rate": 4.4,
@@ -1744,7 +1744,7 @@
         "title": "Foam Roller",
         "price": 439.82,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "furniture",
+        "category": "fitness",
         "image": "https://aarogyamandir.in/wp-content/uploads/2024/05/yoga-foam-grid-roller.jpg",
         "rating": {
             "rate": 4.2,
@@ -1756,7 +1756,7 @@
         "title": "Gaming Keyboard",
         "price": 269.23,
         "description": "High-quality and durable product for daily use.",
-        "category": "toys",
+        "category": "electronics",
         "image": "https://images.anandtech.com/doci/11631/kinesis_freestyle_edge_gaming_07_678x452.jpg",
         "rating": {
             "rate": 4.4,
@@ -1768,7 +1768,7 @@
         "title": "Adjustable Office Chair",
         "price": 294.37,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "men's clothing",
+        "category": "furniture",
         "image": "https://vivo-us.com/cdn/shop/files/DN-CH-K02B_01bpsd1b2.jpg?v=1700672417",
         "rating": {
             "rate": 4.6,
@@ -1792,10 +1792,10 @@
         "title": "Smart Light Bulb",
         "price": 418.88,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "furniture",
+        "category": "home decor",
         "image": "https://energizerconnect.com/wp-content/uploads/2019/08/EAC2-1003-RGB-MOCKUP.jpg",
         "rating": {
-            "rate": 5.0,
+            "rate": 5,
             "count": 174
         }
     },
@@ -1804,10 +1804,10 @@
         "title": "Yoga Mat",
         "price": 464.15,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "furniture",
+        "category": "sports",
         "image": "https://upyoga.in/cdn/shop/files/71ykkfooZeL._AC_SL1500_1500x.jpg?v=1709375305",
         "rating": {
-            "rate": 4.0,
+            "rate": 4,
             "count": 65
         }
     },
@@ -1816,7 +1816,7 @@
         "title": "Gaming Keyboard",
         "price": 304.48,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "men's clothing",
+        "category": "electronics",
         "image": "https://assets-prd.ignimgs.com/2024/10/08/img-4342-1728429780401.jpg?crop=16%3A9&width=888",
         "rating": {
             "rate": 4.8,
@@ -1828,7 +1828,7 @@
         "title": "Men's Denim Jacket",
         "price": 348.69,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "home decor",
+        "category": "men's clothing",
         "image": "https://m.media-amazon.com/images/I/818N0G6aolL._AC_UF1000,1000_QL80_.jpg",
         "rating": {
             "rate": 4.8,
@@ -1840,7 +1840,7 @@
         "title": "Men's Denim Jacket",
         "price": 55.37,
         "description": "High-quality and durable product for daily use.",
-        "category": "sports",
+        "category": "men's clothing",
         "image": "https://m.media-amazon.com/images/I/71dbsi8ghvL._AC_UY1000_.jpg",
         "rating": {
             "rate": 3.9,
@@ -1852,7 +1852,7 @@
         "title": "Gaming Keyboard",
         "price": 447.87,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "furniture",
+        "category": "electronics",
         "image": "https://d3e54emdgoy1fq.cloudfront.net/system/redactor_assets/pictures/71625/PC-ST-MK74-5-1.jpg",
         "rating": {
             "rate": 4.7,
@@ -1876,7 +1876,7 @@
         "title": "Wireless Earbuds",
         "price": 243.8,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "fitness",
+        "category": "electronics",
         "image": "https://m.media-amazon.com/images/I/61YW+CuMaJL.jpg",
         "rating": {
             "rate": 3.6,
@@ -1888,7 +1888,7 @@
         "title": "LED Desk Lamp",
         "price": 129.06,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "furniture",
+        "category": "home decor",
         "image": "https://www.depuley.com/cdn/shop/products/depuley-dllt-wood-swing-arm-desk-lamp-architect-multi-joint-adjustable-gooseneck-table-lamp-modern-architect-desk-light-reading-light-for-work-study-bedroom-hom-494759.jpg?v=1700298422",
         "rating": {
             "rate": 3.5,
@@ -1900,7 +1900,7 @@
         "title": "Gaming Keyboard",
         "price": 95.72,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "kitchen",
+        "category": "electronics",
         "image": "https://cdn.thewirecutter.com/wp-content/media/2024/04/compactmechanicalkeyboards-2048px-1760.jpg?auto=webp&quality=75&width=1024",
         "rating": {
             "rate": 3.6,
@@ -1912,7 +1912,7 @@
         "title": "Gaming Keyboard",
         "price": 116.97,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "home decor",
+        "category": "electronics",
         "image": "https://m.media-amazon.com/images/I/71BIbwUvo4L._AC_UF1000,1000_QL80_.jpg",
         "rating": {
             "rate": 4.9,
@@ -1924,7 +1924,7 @@
         "title": "Men's Denim Jacket",
         "price": 140.42,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "fitness",
+        "category": "men's clothing",
         "image": "https://m.media-amazon.com/images/I/41bP+p2RnNL._AC_.jpg",
         "rating": {
             "rate": 4.4,
@@ -1936,7 +1936,7 @@
         "title": "Foam Roller",
         "price": 118.94,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "sports",
+        "category": "fitness",
         "image": "https://fit-index.com/cdn/shop/products/61eAy5JaGML._AC_SL1500.jpg?v=1599638604",
         "rating": {
             "rate": 4.1,
@@ -1948,7 +1948,7 @@
         "title": "Yoga Mat",
         "price": 14.56,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "electronics",
+        "category": "sports",
         "image": "https://dukaan.b-cdn.net/700x700/webp/media/a0fee709-2209-4d74-81e8-c55ebfcbce47.jpg",
         "rating": {
             "rate": 4.4,
@@ -1972,7 +1972,7 @@
         "title": "Wireless Earbuds",
         "price": 477.12,
         "description": "High-quality and durable product for daily use.",
-        "category": "women's clothing",
+        "category": "electronics",
         "image": "https://gadgetstudiobd.com/wp-content/uploads/2024/07/soundpeats-air5-true-wireless-earphone.jpg",
         "rating": {
             "rate": 3.5,
@@ -1984,7 +1984,7 @@
         "title": "Yoga Mat",
         "price": 206.03,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "home decor",
+        "category": "sports",
         "image": "https://spectralbody.com/wp-content/uploads/2020/02/Hot_Yoga_Mat_Best_Mat_For_Hot_Yoga_Cute_Yoga_Mats-1.jpg",
         "rating": {
             "rate": 4.6,
@@ -1996,7 +1996,7 @@
         "title": "Smart Light Bulb",
         "price": 300.16,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "electronics",
+        "category": "home decor",
         "image": "https://m.media-amazon.com/images/I/61Q9YIuzd7L._AC_UF1000,1000_QL80_.jpg",
         "rating": {
             "rate": 4.5,
@@ -2008,7 +2008,7 @@
         "title": "Women's Handbag",
         "price": 74.92,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "home decor",
+        "category": "women's clothing",
         "image": "https://5.imimg.com/data5/SELLER/Default/2020/9/NQ/PU/FR/114039892/new-product.jpeg",
         "rating": {
             "rate": 4.6,
@@ -2020,10 +2020,10 @@
         "title": "Men's Denim Jacket",
         "price": 241.32,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "home decor",
+        "category": "men's clothing",
         "image": "https://www.bolf.eu/eng_pl_Mens-Hooded-Denim-Jacket-Grey-Bolf-801-87552_1.jpg",
         "rating": {
-            "rate": 3.0,
+            "rate": 3,
             "count": 353
         }
     },
@@ -2032,7 +2032,7 @@
         "title": "Foam Roller",
         "price": 27.1,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "home decor",
+        "category": "fitness",
         "image": "https://images-americanas.b2w.io/produtos/5267699092/imagens/rolo-massagem-foam-roller-liberacao-miofascial-t141-acte-preto-laranja/5267699092_1_large.jpg",
         "rating": {
             "rate": 4.6,
@@ -2044,7 +2044,7 @@
         "title": "Women's Handbag",
         "price": 85.26,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "men's clothing",
+        "category": "women's clothing",
         "image": "https://m.media-amazon.com/images/I/61F4Pdk6nRL._AC_SX466_.jpg",
         "rating": {
             "rate": 4.5,
@@ -2056,10 +2056,10 @@
         "title": "LED Desk Lamp",
         "price": 236.02,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "fitness",
+        "category": "home decor",
         "image": "https://m.media-amazon.com/images/I/611MZW4ePWL._AC_UF894,1000_QL80_.jpg",
         "rating": {
-            "rate": 3.0,
+            "rate": 3,
             "count": 414
         }
     },
@@ -2068,7 +2068,7 @@
         "title": "Adjustable Office Chair",
         "price": 161.79,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "electronics",
+        "category": "furniture",
         "image": "https://assets.wfcdn.com/im/32522818/compr-r85/2681/268182544/mathieson-big-and-tall-office-chair-500lbs-adjustable-lumbar-support-executive-office-chair.jpg",
         "rating": {
             "rate": 4.2,
@@ -2080,7 +2080,7 @@
         "title": "Wireless Earbuds",
         "price": 406.9,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "kitchen",
+        "category": "electronics",
         "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/headphone/a/b/x/oeb-e04d-oraimo-original-imagsrn57mxz4uac.jpeg?q=90&crop=false",
         "rating": {
             "rate": 4.8,
@@ -2092,7 +2092,7 @@
         "title": "LED Desk Lamp",
         "price": 347.03,
         "description": "High-quality and durable product for daily use.",
-        "category": "kitchen",
+        "category": "home decor",
         "image": "https://m.media-amazon.com/images/I/71a6ZfrbUiL._AC_UF1000,1000_QL80_.jpg",
         "rating": {
             "rate": 3.5,
@@ -2104,10 +2104,10 @@
         "title": "Yoga Mat",
         "price": 144.62,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "fitness",
+        "category": "sports",
         "image": "https://noahprime.ca/cdn/shop/products/product-image-809730524.jpg?v=1599747787",
         "rating": {
-            "rate": 5.0,
+            "rate": 5,
             "count": 37
         }
     },
@@ -2116,7 +2116,7 @@
         "title": "Wireless Earbuds",
         "price": 70.67,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "women's clothing",
+        "category": "electronics",
         "image": "https://i.ebayimg.com/images/g/yX8AAOSwOqBlrKWV/s-l400.png",
         "rating": {
             "rate": 3.5,
@@ -2128,7 +2128,7 @@
         "title": "Wireless Earbuds",
         "price": 262.59,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "sports",
+        "category": "electronics",
         "image": "https://images-eu.ssl-images-amazon.com/images/I/71oK0nwUZML._AC_UL750_SR750,750_.jpg",
         "rating": {
             "rate": 4.7,
@@ -2140,7 +2140,7 @@
         "title": "Smart Light Bulb",
         "price": 336.28,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "women's clothing",
+        "category": "home decor",
         "image": "https://i5.walmartimages.com/seo/Ledeez-9W-Multicolor-General-Purpose-Smart-Light-Bulbs-Dimmable-App-Operated-2-Pack_0d68fdfd-5ff7-45fa-a6e0-c9a5ff479f19.4b2cfea9396b4d6c35e3c52556c64b2b.jpeg",
         "rating": {
             "rate": 4.5,
@@ -2152,7 +2152,7 @@
         "title": "LED Desk Lamp",
         "price": 284.72,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "men's clothing",
+        "category": "home decor",
         "image": "https://images-na.ssl-images-amazon.com/images/I/715Jt7TRIYL._AC_UL600_SR600,600_.jpg",
         "rating": {
             "rate": 3.8,
@@ -2164,7 +2164,7 @@
         "title": "Wireless Earbuds",
         "price": 442.26,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "home decor",
+        "category": "electronics",
         "image": "https://i5.walmartimages.com/seo/VEAT00L-Wireless-Earbuds-Bluetooth-Headphone-Sport-5-4-Earbud-72Hrs-Earphone-Earhook-Noise-Cancelling-Mic-IP7-Waterproof-Headset-Workout-Running_6674e2bd-fed6-4e84-9d5b-b8d01296b7e5.a337da9d5854c83c5e1ae9fc4aad236f.jpeg",
         "rating": {
             "rate": 3.1,
@@ -2188,7 +2188,7 @@
         "title": "LED Desk Lamp",
         "price": 192.16,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "kitchen",
+        "category": "home decor",
         "image": "https://m.media-amazon.com/images/I/71XFIswQjQL._AC_UF1000,1000_QL80_.jpg",
         "rating": {
             "rate": 3.4,
@@ -2200,7 +2200,7 @@
         "title": "Women's Handbag",
         "price": 170.21,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "home decor",
+        "category": "women's clothing",
         "image": "https://m.media-amazon.com/images/I/71W38zJPWuL._AC_SL1500_.jpg",
         "rating": {
             "rate": 3.5,
@@ -2224,10 +2224,10 @@
         "title": "Wireless Earbuds",
         "price": 235.54,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "toys",
+        "category": "electronics",
         "image": "https://audionic.co/cdn/shop/files/AirBud-590Image-3_copy_grande.png?v=1731502011",
         "rating": {
-            "rate": 5.0,
+            "rate": 5,
             "count": 294
         }
     },
@@ -2236,7 +2236,7 @@
         "title": "Gaming Keyboard",
         "price": 461.93,
         "description": "High-quality and durable product for daily use.",
-        "category": "furniture",
+        "category": "electronics",
         "image": "https://hocotech.com/wp-content/uploads/2022/02/hoco-gm12-light-and-shadow-rgb-gaming-keyboard-mouse-set-russian-set.jpg",
         "rating": {
             "rate": 4.4,
@@ -2248,10 +2248,10 @@
         "title": "Smart Light Bulb",
         "price": 276.5,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "men's clothing",
+        "category": "home decor",
         "image": "https://www.lifx.com/cdn/shop/files/LIFX-PAR38_Gallery_09_533x.png?v=1710904645",
         "rating": {
-            "rate": 4.0,
+            "rate": 4,
             "count": 116
         }
     },
@@ -2260,7 +2260,7 @@
         "title": "Foam Roller",
         "price": 294.37,
         "description": "High-quality and durable product for daily use.",
-        "category": "home decor",
+        "category": "fitness",
         "image": "https://www.littleblokefitness.com.au/cdn/shop/products/VIBEGridroller.jpg?v=1622787287",
         "rating": {
             "rate": 3.4,
@@ -2284,7 +2284,7 @@
         "title": "Adjustable Office Chair",
         "price": 73.24,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "toys",
+        "category": "furniture",
         "image": "https://img.ltwebstatic.com/images3_spmp/2024/07/01/9b/1719817443be381e7c027e5e3cbb97f3b9b2e3e508_thumbnail_720x.webp",
         "rating": {
             "rate": 4.6,
@@ -2296,7 +2296,7 @@
         "title": "Gaming Keyboard",
         "price": 14.23,
         "description": "High-quality and durable product for daily use.",
-        "category": "kitchen",
+        "category": "electronics",
         "image": "https://cdn.mwave.com.au/images/400/cherry_mx_80_rgb_pink_mechanical_gaming_keyboard_cherry_mx_red_ac47823.jpg",
         "rating": {
             "rate": 4.1,
@@ -2308,7 +2308,7 @@
         "title": "Gaming Keyboard",
         "price": 57.17,
         "description": "High-quality and durable product for daily use.",
-        "category": "fitness",
+        "category": "electronics",
         "image": "https://i.rtings.com/assets/pages/xXDZ1p9x/best-rgb-keyboards-20240515-2-medium.jpg?format=auto",
         "rating": {
             "rate": 3.2,
@@ -2320,7 +2320,7 @@
         "title": "Gaming Keyboard",
         "price": 395.91,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "toys",
+        "category": "electronics",
         "image": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/1/27/c22ccffd-7c6c-44fe-872b-586bac57c62c.jpg",
         "rating": {
             "rate": 3.6,
@@ -2332,7 +2332,7 @@
         "title": "Men's Denim Jacket",
         "price": 112.48,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "toys",
+        "category": "men's clothing",
         "image": "https://www.dhresource.com/webp/m/0x0/f2/albu/g17/M00/FA/F9/rBVa4l__nVeALlPMAAPY4A7rHrU085.jpg",
         "rating": {
             "rate": 4.4,
@@ -2344,7 +2344,7 @@
         "title": "Adjustable Office Chair",
         "price": 161.66,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "fitness",
+        "category": "furniture",
         "image": "https://www.coasterfurniture.com/wp-content/uploads/products/silo/zoom/881184_1.jpg",
         "rating": {
             "rate": 4.7,
@@ -2368,7 +2368,7 @@
         "title": "Yoga Mat",
         "price": 187.35,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "fitness",
+        "category": "sports",
         "image": "https://images-cdn.ubuy.ae/64ef60dad9ba966606120c79-ray-star-extra-thick-yoga-mat.jpg",
         "rating": {
             "rate": 3.3,
@@ -2380,10 +2380,10 @@
         "title": "Men's Denim Jacket",
         "price": 153.55,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "electronics",
+        "category": "men's clothing",
         "image": "https://n.nordstrommedia.com/it/f977c12f-7805-4639-aca3-c5eccad4a360.jpeg?h=365&w=240&dpr=2",
         "rating": {
-            "rate": 5.0,
+            "rate": 5,
             "count": 244
         }
     },
@@ -2392,7 +2392,7 @@
         "title": "Electric Kettle",
         "price": 17.18,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "sports",
+        "category": "kitchen",
         "image": "https://havells.com/media/catalog/product/cache/844a913d283fe95e56e39582c5f2767b/import/Appliances/GHBKTAXK160.jpg",
         "rating": {
             "rate": 4.7,
@@ -2404,7 +2404,7 @@
         "title": "LED Desk Lamp",
         "price": 152.4,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "women's clothing",
+        "category": "home decor",
         "image": "https://ae01.alicdn.com/kf/S9ee6fde840664827bb48190552f4b63a5.jpg_960x960.jpg",
         "rating": {
             "rate": 4.4,
@@ -2416,10 +2416,10 @@
         "title": "Adjustable Office Chair",
         "price": 122.03,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "men's clothing",
+        "category": "furniture",
         "image": "https://m.media-amazon.com/images/I/51brgzpnpVL._AC_UF1000,1000_QL80_.jpg",
         "rating": {
-            "rate": 5.0,
+            "rate": 5,
             "count": 496
         }
     },
@@ -2428,7 +2428,7 @@
         "title": "Men's Denim Jacket",
         "price": 22.2,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "electronics",
+        "category": "men's clothing",
         "image": "https://sc04.alicdn.com/kf/HTB1_LZ6cRLoK1RjSZFuq6xn0XXaC.jpg",
         "rating": {
             "rate": 4.8,
@@ -2440,7 +2440,7 @@
         "title": "Smart Light Bulb",
         "price": 441.46,
         "description": "High-quality and durable product for daily use.",
-        "category": "fitness",
+        "category": "home decor",
         "image": "https://http2.mlstatic.com/D_NQ_NP_919774-MLC70418799103_072023-O.webp",
         "rating": {
             "rate": 3.4,
@@ -2455,7 +2455,7 @@
         "category": "fitness",
         "image": "https://shop.globalbees.com/cdn/shop/files/71UoHcXX2LL_8f34458f-f81c-46af-97fa-03a14f1fd77a.jpg?v=1718331418",
         "rating": {
-            "rate": 4.0,
+            "rate": 4,
             "count": 310
         }
     },
@@ -2464,10 +2464,10 @@
         "title": "Smart Light Bulb",
         "price": 403.08,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "toys",
+        "category": "home decor",
         "image": "https://ledex.ie/cdn/shop/files/10w-remote-control-wifi-e27-smart-ledex-lighting-ltd-366_512x542.png?v=1683303700",
         "rating": {
-            "rate": 4.0,
+            "rate": 4,
             "count": 77
         }
     },
@@ -2488,7 +2488,7 @@
         "title": "Yoga Mat",
         "price": 329.42,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "men's clothing",
+        "category": "sports",
         "image": "https://i5.walmartimages.com/asr/271a9bde-8b86-4b54-a437-f0a87890d3f7.8865d4df33cf632e6cbd799677fb3fb7.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
         "rating": {
             "rate": 4.7,
@@ -2500,7 +2500,7 @@
         "title": "Yoga Mat",
         "price": 84.15,
         "description": "High-quality and durable product for daily use.",
-        "category": "furniture",
+        "category": "sports",
         "image": "https://http2.mlstatic.com/D_973361-MLU78641869652_092024-C.jpg",
         "rating": {
             "rate": 3.1,
@@ -2524,7 +2524,7 @@
         "title": "LED Desk Lamp",
         "price": 301.42,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "women's clothing",
+        "category": "home decor",
         "image": "https://www.depuley.com/cdn/shop/products/depuley-dllt-swing-arm-desk-lamp-wood-adjustable-gooseneck-table-lamp-modern-architect-desk-light-reading-light-for-work-study-bedroom-home-office-college-dorm--700348.jpg?v=1677838135",
         "rating": {
             "rate": 4.8,
@@ -2536,7 +2536,7 @@
         "title": "Men's Denim Jacket",
         "price": 225.65,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "fitness",
+        "category": "men's clothing",
         "image": "https://www.pleinoutlet.com/dw/image/v2/BBKQ_PRD/on/demandware.static/-/Sites-plein-master-catalog/default/dwdfd5a166/images/large/PABC-MDB0433-PDE004N_08HS_d1.jpg?sw=603&sh=768",
         "rating": {
             "rate": 3.9,
@@ -2548,7 +2548,7 @@
         "title": "Gaming Keyboard",
         "price": 462.78,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "sports",
+        "category": "electronics",
         "image": "https://m.media-amazon.com/images/I/815wbEc073L._AC_UF1000,1000_QL80_.jpg",
         "rating": {
             "rate": 4.6,
@@ -2560,7 +2560,7 @@
         "title": "LED Desk Lamp",
         "price": 148.99,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "furniture",
+        "category": "home decor",
         "image": "https://i5.walmartimages.com/asr/aac0ba44-c28e-4afd-a1d0-135960d8f4f8.fadf841a87a31162b0799d5712b63ad4.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
         "rating": {
             "rate": 3.6,
@@ -2572,10 +2572,10 @@
         "title": "Foam Roller",
         "price": 143.27,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "toys",
+        "category": "fitness",
         "image": "https://diet-ethique.eu/cdn/shop/files/Image70_1200x.jpg?v=1706104466",
         "rating": {
-            "rate": 4.0,
+            "rate": 4,
             "count": 336
         }
     },
@@ -2584,10 +2584,10 @@
         "title": "Gaming Keyboard",
         "price": 68.61,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "fitness",
+        "category": "electronics",
         "image": "https://www.nbplaza.com.my/30398-large_default/razer-huntsman-v2-linear-optical-switch-red.jpg",
         "rating": {
-            "rate": 3.0,
+            "rate": 3,
             "count": 15
         }
     },
@@ -2596,7 +2596,7 @@
         "title": "Electric Kettle",
         "price": 454.18,
         "description": "Ideal gift for family or friends on any occasion.",
-        "category": "women's clothing",
+        "category": "kitchen",
         "image": "https://www.electrocity.ie/wp-content/uploads/2023/07/sage-soft-top-luxe-1.7-litre-2400w-electric-kettle-damson-blue-1024x1024.png",
         "rating": {
             "rate": 3.5,
@@ -2608,7 +2608,7 @@
         "title": "Adjustable Office Chair",
         "price": 16.46,
         "description": "Perfect for improving your comfort and productivity.",
-        "category": "toys",
+        "category": "furniture",
         "image": "https://m.media-amazon.com/images/I/61hzqDQFvDL._AC_UF894,1000_QL80_.jpg",
         "rating": {
             "rate": 4.2,
@@ -2620,7 +2620,7 @@
         "title": "Yoga Mat",
         "price": 208.01,
         "description": "Eco-friendly and stylish addition to your space.",
-        "category": "home decor",
+        "category": "sports",
         "image": "https://cdn11.bigcommerce.com/s-zu9c0wie59/images/stencil/original/products/832/5240/Hello-Fit-Kids-Short-Yoga-Mats-60-x-24-x-4mm-10-Pack_4466__76691.1710437981.jpg?c=2",
         "rating": {
             "rate": 4.3,
@@ -2632,7 +2632,7 @@
         "title": "LED Desk Lamp",
         "price": 246.34,
         "description": "Compact and versatile design to fit all needs.",
-        "category": "toys",
+        "category": "home decor",
         "image": "https://pakistanstore.pk/wp-content/uploads/2024/08/Portable-LED-Desk-Lamp.jpg",
         "rating": {
             "rate": 3.2,

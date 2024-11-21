@@ -111,13 +111,13 @@ export default function Home() {
                     <Link href={`/categorias/form/${category.id}`}>
                       <FaEdit />
                     </Link>
-                    <Button
-                      variant="link"
+                    <span
                       className="text-danger p-0 ms-2"
                       onClick={() => excluirCategoria(category.id)}
+                      style={{ cursor: 'pointer' }}
                     >
                       <FaTrash />
-                    </Button>
+                    </span>
                   </div>
                 </ListGroup.Item>
               ))}
