@@ -62,6 +62,7 @@ export default function Page() {
                     <Nav className="ms-auto">
                         <Nav.Link className="me-3" href="/produtos">Produtos</Nav.Link>
                         <Nav.Link href="/categorias">Categorias</Nav.Link>
+                        <Nav.Link href="/clientes">Clientes</Nav.Link>
 
                     </Nav>
 
