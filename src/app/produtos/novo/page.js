@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Form, Button, Alert, Container } from "react-bootstrap";
 import { useRouter } from "next/navigation";
 import Nav from "@/components/Nav";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function ProdutoForm({ params }) {
     const router = useRouter();
@@ -38,7 +39,7 @@ export default function ProdutoForm({ params }) {
                 const index = produtos.findIndex(p => p.id === params.id);
                 produtos[index] = { ...produtos[index], ...produto };
             } else {
-                produto.id = Date.now(); // Gera um ID único
+                produto.id = uuidv4();
                 produtos.push(produto);
             }
             localStorage.setItem('produtos', JSON.stringify(produtos));

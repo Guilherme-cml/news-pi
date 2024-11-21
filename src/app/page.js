@@ -8,6 +8,7 @@ import {
   Col 
 } from 'react-bootstrap';
 import Nav from '@/components/Nav';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -16,8 +17,12 @@ export default function Home() {
     fetch('https://fakestoreapi.com/products')
       .then(res => res.json())
       .then(data => {
-        setProducts(data);
-        localStorage.setItem('produtos', JSON.stringify(data));
+        const produtosComId = data.map(product => ({
+          ...product,
+          id: uuidv4()
+        }));
+        setProducts(produtosComId);
+        localStorage.setItem('produtos', JSON.stringify(produtosComId));
       });
   }, []);
 

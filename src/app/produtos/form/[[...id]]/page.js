@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Pagina from "@/app/components/Pagina";
 import { Form, Button, Alert, Container } from "react-bootstrap";
 import { useRouter } from "next/navigation";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function ProdutoForm({ params }) {
     const router = useRouter();
@@ -18,7 +19,12 @@ export default function ProdutoForm({ params }) {
 
     useEffect(() => {
         const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-        const produtoEncontrado = produtos.find(p => p.id === params.id);
+        const id = Array.isArray(params.id) ? params.id[0] : params.id;
+
+        console.log('Produtos no localStorage:', produtos);
+        console.log('ID do produto a ser editado:', id);
+
+        const produtoEncontrado = produtos.find(p => p.id === id);
 
         if (produtoEncontrado) {
             setProduto(produtoEncontrado);
@@ -35,7 +41,7 @@ export default function ProdutoForm({ params }) {
             if (index !== -1) {
                 produtos[index] = { ...produtos[index], ...produto };
             } else {
-                produto.id = Date.now();
+                produto.id = uuidv4();
                 produtos.push(produto);
             }
             localStorage.setItem('produtos', JSON.stringify(produtos));
