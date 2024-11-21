@@ -14,16 +14,24 @@ export default function Home() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
-      .then(res => res.json())
-      .then(data => {
-        const produtosComId = data.map(product => ({
-          ...product,
-          id: uuidv4()
-        }));
-        setProducts(produtosComId);
-        localStorage.setItem('produtos', JSON.stringify(produtosComId));
-      });
+    const produtosLocalStorage = JSON.parse(localStorage.getItem('produtos'));
+
+    if (produtosLocalStorage && produtosLocalStorage.length > 0) {
+      // Se já existem produtos no localStorage, use-os
+      setProducts(produtosLocalStorage);
+    } else {
+      // Caso contrário, faça a chamada à API
+      fetch('https://fakestoreapi.com/products')
+        .then(res => res.json())
+        .then(data => {
+          const produtosComId = data.map(product => ({
+            ...product,
+            id: uuidv4()
+          }));
+          setProducts(produtosComId);
+          localStorage.setItem('produtos', JSON.stringify(produtosComId));
+        });
+    }
   }, []);
 
   return (
