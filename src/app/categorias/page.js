@@ -168,7 +168,7 @@ export default function Home() {
                         {product.title}
                       </Card.Title>
                       <Card.Text className="text-muted mb-2">
-                        R$ {product.price.toFixed(2)}
+                        R$ {product.price}
                       </Card.Text>
                       <Button
                         onClick={() => addToCart(product)}
