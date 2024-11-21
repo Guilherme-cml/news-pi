@@ -37,6 +37,21 @@ export default function Page() {
         router.push('/login')
     }
 
+    const removeFromCart = (index) => {
+        const newCart = [...cartItems];
+        newCart.splice(index, 1);
+        setCartItems(newCart);
+        localStorage.setItem('cart', JSON.stringify(newCart));
+    };
+
+    const updateQuantity = (index, newQuantity) => {
+        if (newQuantity < 1) return;
+        const newCart = [...cartItems];
+        newCart[index].quantity = newQuantity;
+        setCartItems(newCart);
+        localStorage.setItem('cart', JSON.stringify(newCart));
+    };
+
     return (
 
         <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
@@ -96,13 +111,30 @@ export default function Page() {
                                             <div className="flex-grow-1">
                                                 <h6 className="mb-0">{item.name}</h6>
                                                 <p className="mb-0">R$ {item.price}</p>
-                                                <small>Quantidade: {item.quantity}</small>
+                                                <div className="d-flex align-items-center">
+                                                    <button 
+                                                        className="btn btn-sm btn-outline-secondary"
+                                                        onClick={() => updateQuantity(index, item.quantity - 1)}
+                                                    >-</button>
+                                                    <span className="mx-2">{item.quantity}</span>
+                                                    <button 
+                                                        className="btn btn-sm btn-outline-secondary"
+                                                        onClick={() => updateQuantity(index, item.quantity + 1)}
+                                                    >+</button>
+                                                    <button 
+                                                        className="btn btn-sm btn-danger ms-2"
+                                                        onClick={() => removeFromCart(index)}
+                                                    >Remove</button>
+                                                </div>
                                             </div>
                                         </div>
                                     ))}
                                     <div className="mt-3">
                                         <h5>Total: R$ {cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0).toFixed(2)}</h5>
-                                        <button className="btn btn-primary w-100">Finalizar Compra</button>
+                                        <Link href="/cart" className="btn btn-primary w-100 mb-2" onClick={handleClose}>
+                                            Ver Carrinho
+                                        </Link>
+                                        <button className="btn btn-success w-100">Finalizar Compra</button>
                                     </div>
                                 </>
                             )}

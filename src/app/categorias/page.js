@@ -16,6 +16,7 @@ import Link from 'next/link';
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   useEffect(() => {
@@ -57,6 +58,25 @@ export default function Home() {
       setCategories(novasCategorias);
     }
   };
+  const addToCart = (product) => {
+    const currentCart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const existingItemIndex = currentCart.findIndex(item => item.id === product.id);
+    
+    if (existingItemIndex > -1) {
+        currentCart[existingItemIndex].quantity += 1;
+    } else {
+        currentCart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            quantity: 1
+        });
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(currentCart));
+    setCartItems(currentCart); // If you're using the cart state in the component
+};
 
   const filteredProducts = selectedCategory === 'all'
     ? products
@@ -70,14 +90,14 @@ export default function Home() {
       <Container>
         <Row>
           <Col md={3}>
-            <h3>Categories</h3>
+            <h3>Categorias</h3>
             <ListGroup className="mb-4">
               <ListGroup.Item
                 action
                 active={selectedCategory === 'all'}
                 onClick={() => setSelectedCategory('all')}
               >
-                All Products
+                Todos os Produtos
               </ListGroup.Item>
               {categories.map(category => (
                 <ListGroup.Item
@@ -135,10 +155,11 @@ export default function Home() {
                         ${product.price}
                       </Card.Text>
                       <Button
+                        onClick={() => addToCart(product)}
                         variant="primary"
                         className="mt-auto"
                       >
-                        Add to Cart
+                        Adicionar ao Carrinho
                       </Button>
                     </Card.Body>
                   </Card>
