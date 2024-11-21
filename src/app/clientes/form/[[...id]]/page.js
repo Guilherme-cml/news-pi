@@ -1,6 +1,8 @@
 'use client'
 
 import Nav from "@/components/Nav";
+
+import ClienteValidator from "@/validators/ClienteValidator";
 import { Formik } from "formik";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -17,7 +19,7 @@ export default function Page({ params }) {
 
     const clientes = JSON.parse(localStorage.getItem('clientes')) || []
     const dados = clientes.find(item => item.id == params.id)
-    const cliente = dados || { nome: '', email: '', telefone: '', data_nascimento: '', tipo_documento: '', documento: '' }
+    const cliente = dados || { nome: '', email: '', telefone: '', data_nascimento: '', cpf: '' }
 
     function salvar(dados) {
 
@@ -39,6 +41,7 @@ export default function Page({ params }) {
 
             <Formik
                 initialValues={cliente}
+                validationSchema={ClienteValidator}
                 onSubmit={values => salvar(values)}
             >
                 {({
@@ -46,6 +49,7 @@ export default function Page({ params }) {
                     handleChange,
                     handleSubmit,
                     setFieldValue,
+                    errors,
                 }) => {
                     return (
                         <Form>
@@ -56,25 +60,26 @@ export default function Page({ params }) {
                                     name="nome"
                                     value={values.nome}
                                     onChange={handleChange('nome')}
+                                    isInvalid={!!errors.nome}
                                 />
+                                <Form.Control.Feedback type="invalid">
+                                    {errors.nome}
+                                </Form.Control.Feedback>
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="tipo_documento">
-                                <Form.Label>Tipo de Documento</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    name="tipo_documento"
-                                    value={values.tipo_documento}
-                                    onChange={handleChange('tipo_documento')}
-                                />
-                            </Form.Group>
+                           
+                          
                             <Form.Group className="mb-3" controlId="documento">
-                                <Form.Label>Documento</Form.Label>
+                                <Form.Label>CPF</Form.Label>
                                 <Form.Control
                                     type="text"
-                                    name="documento"
-                                    value={values.documento}
-                                    onChange={handleChange('documento')}
+                                    name="cpf"
+                                    value={values.cpf}
+                                    onChange={handleChange('cpf')}
+                                    isInvalid={!!errors.cpf}
                                 />
+                                <Form.Control.Feedback type="invalid">
+                                    {errors.cpf}
+                                </Form.Control.Feedback>
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="email">
                                 <Form.Label>E-mail</Form.Label>
@@ -83,7 +88,11 @@ export default function Page({ params }) {
                                     name="email"
                                     value={values.email}
                                     onChange={handleChange('email')}
+                                    isInvalid={!!errors.email}
                                 />
+                                <Form.Control.Feedback type="invalid">
+                                    {errors.email}
+                                </Form.Control.Feedback>
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="telefone">
                                 <Form.Label>Telefone</Form.Label>
@@ -94,7 +103,11 @@ export default function Page({ params }) {
                                     onChange={(value)=>{
                                         setFieldValue('telefone', mask(value.target.value, '(99) 99999-9999'))
                                     }}
+                                    isInvalid={!!errors.telefone}
                                 />
+                                <Form.Control.Feedback type="invalid">
+                                    {errors.telefone}
+                                </Form.Control.Feedback>
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="data_nascimento">
                                 <Form.Label>Dt. Nascimento</Form.Label>
@@ -105,7 +118,11 @@ export default function Page({ params }) {
                                     onChange={(value)=>{
                                         setFieldValue('data_nascimento', mask(value.target.value, '99/99/9999'))
                                     }}
+                                    isInvalid={!!errors.data_nascimento}
                                 />
+                                <Form.Control.Feedback type="invalid">
+                                    {errors.data_nascimento}
+                                </Form.Control.Feedback>
                             </Form.Group>
                             <div className="text-center">
                                 <Button onClick={handleSubmit} variant="success">

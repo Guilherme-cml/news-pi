@@ -40,6 +40,7 @@ export default function Page() {
                     <tr>
                         <th>Nome</th>
                         <th>E-mail</th>
+                        <th>CPF</th>
                         <th>Telefone</th>
                         <th>Data de Nascimento</th>
                         <th>Ações</th>
@@ -50,6 +51,7 @@ export default function Page() {
                         <tr key={item.id}>
                             <td>{item.nome}</td>
                             <td>{item.email}</td>
+                            <td>{item.cpf}</td>
                             <td>{item.telefone}</td>
                             <td>{item.data_nascimento}</td>
                             <td>
