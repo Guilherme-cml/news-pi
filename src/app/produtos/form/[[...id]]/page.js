@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 export default function ProdutoForm({ params }) {
     const router = useRouter();
     const [error, setError] = useState(null);
+    const [categories, setCategories] = useState([]);
     const [produto, setProduto] = useState({
         title: '',
         price: '',
@@ -31,6 +32,10 @@ export default function ProdutoForm({ params }) {
         } else {
             setError('Produto não encontrado no localStorage');
         }
+
+        // Carregar categorias do localStorage
+        const storedCategories = JSON.parse(localStorage.getItem('categorias')) || [];
+        setCategories(storedCategories);
     }, [params.id]);
 
     const handleSubmit = (e) => {
@@ -91,12 +96,19 @@ export default function ProdutoForm({ params }) {
                     <Form.Group className="mb-3">
                         <Form.Label>Categoria</Form.Label>
                         <Form.Control
-                            type="text"
+                            as="select"
                             name="category"
                             value={produto.category}
                             onChange={handleChange}
                             required
-                        />
+                        >
+                            <option value="">Selecione uma categoria</option>
+                            {categories.map(category => (
+                                <option key={category} value={category}>
+                                    {category}
+                                </option>
+                            ))}
+                        </Form.Control>
                     </Form.Group>
 
                     <Form.Group className="mb-3">

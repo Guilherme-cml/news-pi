@@ -16,8 +16,13 @@ export default function ProdutoForm({ params }) {
         category: '',
         image: ''
     });
+    const [categories, setCategories] = useState([]);
 
     useEffect(() => {
+        // Carregar categorias do localStorage
+        const storedCategories = JSON.parse(localStorage.getItem('categorias')) || [];
+        setCategories(storedCategories);
+
         if (params?.id) {
             fetchProduto(params.id);
         }
@@ -90,12 +95,19 @@ export default function ProdutoForm({ params }) {
                     <Form.Group className="mb-3">
                         <Form.Label>Categoria</Form.Label>
                         <Form.Control
-                            type="text"
+                            as="select"
                             name="category"
                             value={produto.category}
                             onChange={handleChange}
                             required
-                        />
+                        >
+                            <option value="">Selecione uma categoria</option>
+                            {categories.map(category => (
+                                <option key={category} value={category}>
+                                    {category}
+                                </option>
+                            ))}
+                        </Form.Control>
                     </Form.Group>
 
                     <Form.Group className="mb-3">

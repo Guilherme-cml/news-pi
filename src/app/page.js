@@ -10,26 +10,39 @@ import {
 import Nav from '@/components/Nav';
 import { v4 as uuidv4 } from 'uuid';
 
-export default function Home() {
-  const [products, setProducts] = useState([]);
+export default function HomePage() {
+  const [categoryList, setCategoryList] = useState([]);
+  const [productList, setProductList] = useState([]);
 
   useEffect(() => {
-    const produtosLocalStorage = JSON.parse(localStorage.getItem('produtos'));
-
-    if (produtosLocalStorage && produtosLocalStorage.length > 0) {
+    const storedCategories = JSON.parse(localStorage.getItem('categorias'));
+    if (storedCategories && storedCategories.length > 0) {
+      // Se já existem categorias no localStorage, use-os
+      setCategoryList(storedCategories);
+    } else {
+      // Caso contrário, faça a chamada à API
+      fetch('https://fakestoreapi.com/products/categories')
+        .then(res => res.json())
+        .then(data => {
+          setCategoryList(data);
+          localStorage.setItem('categorias', JSON.stringify(data));
+        });
+    }
+    const storedProducts = JSON.parse(localStorage.getItem('produtos'));
+    if (storedProducts && storedProducts.length > 0) {
       // Se já existem produtos no localStorage, use-os
-      setProducts(produtosLocalStorage);
+      setProductList(storedProducts);
     } else {
       // Caso contrário, faça a chamada à API
       fetch('https://fakestoreapi.com/products')
         .then(res => res.json())
         .then(data => {
-          const produtosComId = data.map(product => ({
+          const productsWithId = data.map(product => ({
             ...product,
             id: uuidv4()
           }));
-          setProducts(produtosComId);
-          localStorage.setItem('produtos', JSON.stringify(produtosComId));
+          setProductList(productsWithId);
+          localStorage.setItem('produtos', JSON.stringify(productsWithId));
         });
     }
   }, []);
@@ -40,7 +53,7 @@ export default function Home() {
 
       <Container>
         <Row xs={1} md={3} lg={4} className="g-4">
-          {products.map(product => (
+          {productList.map(product => (
             <Col key={product.id}>
               <Card className="h-100">
                 <div style={{ height: '200px', padding: '1rem' }}>
